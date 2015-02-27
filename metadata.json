@@ -1,0 +1,148 @@
+{
+	"name":"Body Health",
+	"thumbnail":"bodyhealth.png",
+	"screenshot":"bodyhealth.png",
+	"templateType":"standard",
+	"pageTypes":["home"],
+    "tags": {
+    "en": ["turism", "clean", "modern", "colorful", "colourful", "flexible", "open", "vertical menu", "spa", "serif", "travel", "hospitality", "holiday", "hotel"],
+    "es": ["turismo", "limpio", "moderno", "colorido", "flexible", "abierto", "menú vertical", "balneario", "serif", "viaje", "hoteleria", "vacaciones", "hotel"],
+    "br": ["turismo", "limpo", "moderno", "colorido", "flexível", "aberto", "menu vertical", "estância termal", "serif", "Viagem", "hospitalidade", "férias", "hotel"]
+    },
+	"colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#B7B8B9",
+            "color3":"#704a46",
+            "color4":"#3e3e3e",
+            "color5":"#3e3e3e",
+            "color6":"#f7f3f1",
+            "color7":"#05192b"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#e4e4e9",
+            "color3":"#7874bd",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#F0F0F1",
+            "color7":"#251f37"
+        },
+        "Swatch 3": {
+            "color1":"#f5f3f2",
+            "color2":"#ebe9e8",
+            "color3":"#e78638",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#ebe9e8",
+            "color7":"#3a332f"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#f6f7f8",
+            "color3":"#3ea1ca",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#f6f7f8",
+            "color7":"#112a3a"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#f2f3f4",
+            "color3":"#9fcc3d",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#f2f3f4",
+            "color7":"#21282f"
+        }
+    },
+    "fontSwatch": {
+       "title": "Ubuntu, PT Serif",
+        "font1": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "28px",
+            "font-weight": "inherit",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-size": "14px",
+            "font-weight": "300",
+            "line-height": "22px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-size": "15px",
+            "font-weight": "300",
+            "line-height": "25px",
+            "color": "@color-swatch1",
+            "color-hover": "darken(@color-swatch1, 20%)",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch7",
+            "background-color-hover": "darken(@color-swatch7, 3%)"
+        },
+        "font7": {
+            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-size": "14px",
+            "font-weight": "500",
+            "line-height": "25px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
+        },
+        "font8": {
+            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-size": "24px",
+            "font-weight": "300",
+            "line-height": "36px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-size": "14px",
+            "font-weight": "300",
+            "line-height": "26px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch3",
+            "letter-spacing": "inherit"
+        }
+    }
+}

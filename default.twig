@@ -1,0 +1,39 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-pt-default">
+
+<div class="nav">
+    {{widget('extendednavigation', 'extendednavigation', {"align":"left"})|raw}}
+</div> <!-- end nav -->
+
+<div class="zone-area clearfix">
+    <div class="header-container">
+        <div class="header-content-widgets">
+            <div class="header-left">
+                {{widget('content', 'headercontentleft', {"content":"<p>Lorem Ipsum Dolor</p>"})|raw}}
+            </div>
+            <div class="header-right">
+                {{widget('content', 'headercontentright', {"content":"<p>Lorem Ipsum Dolor</p>"})|raw}}
+            </div>
+        </div><!-- end header-content-widgets -->
+        <header class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </header>  
+    </div> <!-- end header-container -->
+    <div class="main wrapper clearfix">
+        {{zone('main')|raw}}
+    </div>  
+    <footer class="bk-footer">
+    <div class="wrapper clearfix">       
+        {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+    </div>
+</footer><!-- end bk-footer -->
+</div><!-- end zone-area -->
+
+</div><!-- end bk-pt-default -->
+
+{% endblock %}
