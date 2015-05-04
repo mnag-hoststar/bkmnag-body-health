@@ -92,7 +92,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "14px",
             "font-weight": "300",
             "line-height": "22px",
@@ -100,7 +100,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "15px",
             "font-weight": "300",
             "line-height": "25px",
@@ -111,9 +111,9 @@
             "background-color-hover": "darken(@color-swatch7, 3%)"
         },
         "font7": {
-            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "14px",
-            "font-weight": "500",
+            "font-weight": "400",
             "line-height": "25px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit",
@@ -121,7 +121,7 @@
             "background-color-hover": "darken(@color-swatch3,5%)"
         },
         "font8": {
-            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "24px",
             "font-weight": "300",
             "line-height": "36px",
@@ -129,7 +129,7 @@
             "letter-spacing": "inherit"
         },
         "font9": {
-            "font-family": "\"Ubuntu\", Verdana, Geneva, sans-serif",
+            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "14px",
             "font-weight": "300",
             "line-height": "26px",

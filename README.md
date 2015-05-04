@@ -1,5 +1,5 @@
-Langkawi
+Body Health
 ========
 
-BaseKit's Langkawi Template
+BaseKit's Body Health Template
 
