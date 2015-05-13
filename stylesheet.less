@@ -429,6 +429,7 @@ left: inherit !important;
   height: 650px; 
   background-position: center center;
   margin-bottom: 30px;
+  display: inherit;
  }
 
 .widget.feature .feature-bgimg .content {
@@ -527,10 +528,14 @@ left: inherit !important;
 }
 
 .widget.content span.expand {
-    font-family: @font-swatch3-font-family;
-    background-color: @color-swatch3;
-    color: @font-swatch7-color;
-    font-size: @font-swatch5-font-size;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @font-swatch7-background-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
     padding: 4px 8px;
     margin: 4px 0;
     -webkit-border-radius: 4px;
@@ -543,7 +548,11 @@ left: inherit !important;
 .widget.content span.expand:hover,
 .widget.content span.expand:focus {
     cursor: pointer;
-    background-color: darken(@color-swatch3,5%);
+    background-color: @font-swatch7-background-color-hover;
+}
+
+.expand .more, .expand .less {
+    color: @font-swatch7-color;
 }
 
 blockquote {
@@ -628,6 +637,8 @@ blockquote {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 
@@ -775,7 +786,7 @@ hr.line {
 }
 
 .widget.twitter .twitter-profile-pic {
-    margin: 20px;
+    margin: 30px 25px 0 30px;
 }
 
 ul.twitter {
@@ -785,7 +796,7 @@ ul.twitter {
         }
     }
     .twitter-content {
-        padding-top: 10px;
+        padding: 20px 30px;
         p {
             padding-bottom: 0;
         }
@@ -801,7 +812,7 @@ ul.twitter {
 
 
 .widget.profile ul.twitter .twitter-content {
-        padding-left: 0;
+    padding-left: 0;
 }
 
 .widget.twitter .twitter-content span a {
@@ -912,6 +923,9 @@ ul.twitter {
     text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
     letter-spacing: 1px;
     border-radius: 4px;
+    @media @mobile {
+        width: 100%;
+    }
 }
   
 .widget.contactform fieldset button.btn:hover {
@@ -1539,10 +1553,8 @@ select[name="displayCount"] {
         padding: 0;
         border-radius: 4px;
         @media @tablet {
-          width: 69%;
-        }
-        @media @mobile {
-            width: 69%;
+          width: 100%;
+          margin-bottom: 15px;
         }
     }
     .blog-search-submit-button {
@@ -1563,8 +1575,9 @@ select[name="displayCount"] {
         text-transform: uppercase;
         text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
         letter-spacing: 1px;
-        @media @mobile {
-            width: 30%;
+        @media @tablet {
+            width: 100%;
+            margin-left: 0;
         }
     }
 } 
@@ -1591,6 +1604,7 @@ select[name="displayCount"] {
 .blog-post-sharing {
     margin: 1.8em 0;
     button {
+        border-radius: 4px;
         &.btn.facebook {
             background-color: #3b5998;
             &:hover {
@@ -1666,7 +1680,7 @@ footer.blog-post-metadata time {
 
  .widget.signupform {
     display: block;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .widget.signupform fieldset {
@@ -1699,6 +1713,10 @@ footer.blog-post-metadata time {
     margin-bottom: 30px;
     padding: 0;
     border-radius: 4px;
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 .widget.signupform fieldset input:focus {
@@ -1723,6 +1741,9 @@ footer.blog-post-metadata time {
     text-transform: uppercase;
     text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
     letter-spacing: 1px;
+    @media @mobile {
+        width: 100%;
+    }
 }
 
 .widget.signupform fieldset button.btn:hover {
@@ -2486,9 +2507,13 @@ footer.blog-post-metadata time {
 			margin: 1em 0;
 		}
 		.ecom-productslist-product {
-            width: 32.5%;
-            margin-left: 0;
-            margin-right: 0.25em;
+            width: 32.36%;
+            margin-left: 1%;
+            @media @mobile {
+                width: 47%;
+                margin: 1%;
+                display: inline-block;
+            }
 		}
 }
 
@@ -2562,23 +2587,30 @@ select[name="displayCount"] {
   }
 } */
 
+.widget.ecomproductslist .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
+    background-color: transparent;
+    @media @mobile {
+        height: 150px !important;
+    }
+}
+
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
+    width: 32.36%;
+    margin-left: 1%;
+    @media @tablet {
+        width: 47%;
+        margin: 1%;
+        display: inline-block;
+    }
+}
+
 .ecom-productslist-product, .ecom-featuredproducts-product {
     margin-top: 2em;
-    .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap {
-        margin-bottom: 1em;
-        background-color: @color-swatch6;
-        @media @mobile {
-            background-image: none !important;
-            height: auto !important;
-            img {
-                display: block !important;
-                max-width: 100%;
-            }
-        }
-    }
     .ecom-productlist-info, .ecom-featuredproducts-info {
         padding-top: 1em;
         border-top: 1px solid darken(@color-swatch6,10%);
+        margin-top: 10px;
         @media @mobile {
             border-top: none;
             padding-top: 0;
@@ -2641,11 +2673,13 @@ select[name="displayCount"] {
 
 .widget.ecomfeaturedproducts {
     margin-bottom: 4em;
+    margin-left: 0;
 }
 
 .widget.ecomfeaturedproducts .ecom-featuredproducts-header {
     background: none;
     border-bottom: 1px solid darken(@color-swatch6, 10%);
+    margin-left: 0;
 }
 
 .ecom-featuredproducts-header h2 {
@@ -2809,7 +2843,7 @@ a.btn.ecombasket-summary-link {
                     }
                 }
                 &:nth-child(2) {
-                    width: 68%;
+                    width: 58%;
                 }
                 &:nth-child(3) {
                     text-align: right;
@@ -2823,30 +2857,30 @@ a.btn.ecombasket-summary-link {
             @media @mobile {
                 display: table;
                 th:nth-child(3) {
-                    display: none;
+                    //display: none;
                 }
                 td {
-                    padding: 1em 0 0;
+                    /*padding: 1em 0 0;
                     float: left;
                     width: 100%;
-                    border-bottom: none;
+                    border-bottom: none; */
                     &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-                        width: 100%;
+                        width: 33%;
                     }
                     &:nth-child(3) {
-                        text-align: left;
+                        /* text-align: left;
                         padding: 0 0 1em;
                         color: @color-swatch4;
-                        border-bottom: 1px solid fade(@color-swatch5,10%);
+                        border-bottom: 1px solid fade(@color-swatch5,10%); */
                     }
                     &.basket-summary-amount {
-                        padding: 1em 0;
+                        //padding: 1em 0;
                     }
                 }
             }
             &.basket-summary-items {
                 td {
-                    vertical-align: top;
+                    vertical-align: middle;
                     .image-wrap {
                         width: 95px;
                         height: 95px;
@@ -2887,8 +2921,8 @@ a.btn.ecombasket-summary-link {
                                 border: 1px solid darken(@color-swatch6,30%);
                             }
                             @media @tablet {
-                                width: 44px;
-                                height: 44px;
+                                width: 35px;
+                                height: 35px;
                             }
                         }
                         span {
@@ -2897,7 +2931,7 @@ a.btn.ecombasket-summary-link {
                         }
                     }
                     &.basket-summary-amount {
-                        vertical-align: bottom;
+                        //vertical-align: middle;
                     }
                 }
             }
@@ -2910,6 +2944,7 @@ a.btn.ecombasket-summary-link {
                     font-size: bkscale(@font-swatch3-font-size,0.8);
                     font-weight: 500;
                     line-height: @font-swatch3-line-height;
+                    height: 60px;
                 }
             }
         }
