@@ -5,9 +5,9 @@
 	"templateType":"standard",
 	"pageTypes":["home"],
     "tags": {
-    "en": ["turism", "clean", "modern", "colorful", "colourful", "flexible", "open", "vertical menu", "spa", "serif", "travel", "hospitality", "holiday", "hotel"],
-    "es": ["turismo", "limpio", "moderno", "colorido", "flexible", "abierto", "menú vertical", "balneario", "serif", "viaje", "hoteleria", "vacaciones", "hotel"],
-    "br": ["turismo", "limpo", "moderno", "colorido", "flexível", "aberto", "menu vertical", "estância termal", "serif", "Viagem", "hospitalidade", "férias", "hotel"]
+    "en": ["turism", "clean", "modern", "colorful", "colourful", "flexible", "open", "vertical menu", "spa", "serif", "travel", "hospitality", "holiday", "hotel", "wellness"],
+    "es": ["turismo", "limpio", "moderno", "colorido", "flexible", "abierto", "menú vertical", "balneario", "serif", "viaje", "hoteleria", "vacaciones", "hotel", "bienestar"],
+    "br": ["turismo", "limpo", "moderno", "colorido", "flexível", "aberto", "menu vertical", "estância termal", "serif", "Viagem", "hospitalidade", "férias", "hotel", "wellness"]
     },
 	"colorSwatches":
     {
@@ -58,7 +58,7 @@
         }
     },
     "fontSwatch": {
-       "title": "Ubuntu, PT Serif",
+       "title": "Ubuntu",
         "font1": {
             "font-family": "\"PT Serif\", Georgia, serif",
             "font-size": "30px",
