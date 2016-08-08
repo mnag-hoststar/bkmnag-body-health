@@ -1,7 +1,7 @@
 {
 	"name":"Body Health",
-	"thumbnail":"bodyhealth.png",
-	"screenshot":"bodyhealth.png",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"bodyhealth-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes":["home"],
     "tags": {
@@ -105,7 +105,7 @@
             "font-weight": "300",
             "line-height": "25px",
             "color": "@color-swatch1",
-            "color-hover": "darken(@color-swatch1, 20%)",
+            "color-hover": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch7",
             "background-color-hover": "darken(@color-swatch7, 3%)"
