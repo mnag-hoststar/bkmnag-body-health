@@ -266,7 +266,6 @@ header nav {
 		}
 		
 		@media @tablet {
-			width: auto;
 			margin: 0;
 			padding: @language-padding @language-padding 0;
 		}
@@ -463,6 +462,13 @@ header nav {
 
 .language-selector__name,
 .language-selector__localised-name {
+	.language-selector & {
+		-webkit-font-smoothing: auto;
+		-moz-osx-font-smoothing: auto;
+		font-smooth: auto;
+		text-rendering: auto;
+	}
+	
 	.language-selector.language-selector--flag-text & {
 		display: inline-block;
 		padding: @language-padding 0 @language-padding @language-padding;
