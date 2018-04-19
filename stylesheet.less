@@ -13,12 +13,10 @@ body {
 .nav {
 	z-index: 100;
 	overflow: hidden;
-	overflow-y: auto;
 	background: @color-swatch7;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 9999;
 	width: 22%;
 	height: 100%;
 	padding-left: 2em;
@@ -256,14 +254,8 @@ header nav {
 .language-selector__inner {
 	.language-selector & {
 		box-sizing: content-box;
-		width: 90%;
-		margin: 0 5%;
+		margin: 0 @language-padding;
 		padding: @language-padding 0 0;
-		
-		@media only screen and (min-width: 1300px) {
-			width: 960px;
-			margin: 0 auto;
-		}
 		
 		@media @tablet {
 			margin: 0;
@@ -271,12 +263,7 @@ header nav {
 		}
 	}
 	.language-selector.language-selector--dropdown & {
-		width: 960px;
-		padding: @language-padding 0;
-		
-		@media @tablet {
-			padding: @language-padding;
-		}
+		padding: @language-padding;
 		
 		@media @mobile {
 			width: 100%;
@@ -305,7 +292,7 @@ header nav {
 		box-sizing: border-box;
 		margin: @language-padding 0;
 		min-width: auto;
-		max-width: 90%;
+		max-width: 100%;
 		@media @tablet {
 			margin: 0;
 			padding: @language-padding;
