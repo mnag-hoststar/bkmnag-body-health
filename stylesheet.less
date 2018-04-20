@@ -57,12 +57,9 @@ body {
 }
 
 .wrapper {
+	max-width: 960px;
 	width: 90%;
-	margin: 0 5%;
-	@media only screen and (min-width: 1300px) {
-		width: 960px;
-		margin: 0 auto;
-	}
+	margin: 0 auto;
 }
 
 
@@ -471,7 +468,7 @@ header nav {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		.language-selector--flag-text& {
-			@media only screen and (max-width: 480px) {
+			@media only screen and (max-width: 380px) {
 				display: none;
 			}
 		}
@@ -2528,13 +2525,13 @@ footer.blog-post-metadata time {
 			color: @color-swatch3;
 			background-image: none;
 			&:before, &:after {
-					content: "\2605";
-					display: inline-block;
-					height: 27px;
-					width: 28px;
-					margin: 0 10px;
-					position: relative;
-					top: -1px;
+				content: "\2605";
+				display: inline-block;
+				height: 27px;
+				width: 28px;
+				margin: 0 10px;
+				position: relative;
+				top: -1px;
 			}
 		}
 	}
