@@ -11,19 +11,17 @@ body {
    =============================== */
 
 .nav {
-	z-index: 100;
-	overflow: hidden;
-	background: @color-swatch7;
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 100;
+	overflow: hidden;
+    overflow-y: auto;
+	background: #05192b;
 	width: 22%;
 	height: 100%;
-	padding-left: 2em;
-	padding-right: 2em;
-	padding-top: 270px;
+	padding: 2em;
 	text-align: left;
-	float: left;
 	-webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
 	-moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
 	box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
@@ -35,6 +33,7 @@ body {
 		width: 100%;
 		padding: 0;
 		position: relative;
+    	overflow-y: hidden;
 	}
 }
 
@@ -487,16 +486,24 @@ header nav {
 
 .widget {
 	&.extendednavigation {
+		display: table;
+		height: 100%;
 		z-index: 100;
-		float: left;
 		position: relative;
 		width: 100%;
 		margin-bottom: 1em;
 		min-height: 45px;
 		@media @tablet {
+			display: block;
 			background-color: @color-swatch7;
-			float: left;
 			margin-bottom: 0;
+		}
+		.extendednavigation {
+			display: table-cell;
+			vertical-align: middle;
+			@media @tablet {
+				display: block;
+			}
 		}
 		li {
 			ul {
@@ -527,9 +534,6 @@ header nav {
 					&:last-child {
 					  border-bottom: none;
 					}
-				}
-				&:first-child {
-					
 				}
 				&:hover {
 					ul {
@@ -610,7 +614,14 @@ header nav {
 					ul {
 						padding: 0;
 						width: 100%;
+						position: absolute;
+						border: 1px solid @font-swatch6-color;
+						
+						@media @tablet {
+							position: static;
+						}
 						li {
+							position: relative;
 							a {
 								background-color: @font-swatch6-background-color;
 								&:hover {
@@ -688,8 +699,8 @@ header nav {
 
 
 .widget.extendednavigation .bk-overlay {
-width: 100% !important;
-left: inherit !important;
+	width: 100% !important;
+	left: inherit !important;
 }
 
 
@@ -1440,7 +1451,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 }
 
 .widget.profile .twitter .twitter-profile-pic {
-  display: none;
+	display: none;
 	margin: 5px 20px 0;
 	background-image: image('/images/twitter-img.png');
 	background-position: right center;
