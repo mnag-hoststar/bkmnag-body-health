@@ -680,7 +680,8 @@ header nav {
 
 // Selected state
 
-.widget.extendednavigation ul li.selected, .widget.extendednavigation ul li:hover ul li.selected, 
+.widget.extendednavigation ul li.selected,
+.widget.extendednavigation ul li:hover ul li.selected, 
 .widget.extendednavigation ul li.folder.selected ul li.selected, 
 .widget.extendednavigation ul li.folder.selected {
 	a, .text {
@@ -691,7 +692,6 @@ header nav {
 .extendednavigation ul li.folder.selected ul li .text {
 	color: @color-swatch1;
 }
-
 
 .widget .extendednavigation ul li.folder:after {
 	display: none;
@@ -2749,54 +2749,6 @@ select {
 select[name="displayCount"] {
 	margin-bottom: 0;
 }
-
-/*.productlist-search {
-	width: 49%;
-  input {
-	  height: 40px;
-	  width: 30%;
-	  border: 1px solid fade(@color-swatch3, 20%);
-	  border-radius: 4px;
-	  background-color: @color-swatch1;
-	  font-family: @font-swatch5-font-family;
-	  font-size: @font-swatch5-font-size;
-	  color: @color-swatch5;
-	  &:focus {
-		  box-shadow: 0 0 5px fade(@color-swatch3, 20%);
-		}
-	  @media @tablet {
-		min-width: 50%;
-		margin-bottom: 20px;
-	  }
-	  @media @mobile {
-		  width: 100%;
-		  height: 45px;
-		  border: 1px solid darken(@color-swatch2,8%);
-	  }
-  }
-  .btn {
-		margin-left: 5px;
-		border: none;
-		border-radius: 4px;
-		height: 40px;
-		font-family: @font-swatch7-font-family;
-		font-size: @font-swatch7-font-size;
-		font-weight:@font-swatch7-font-weight;
-		background-color: @font-swatch7-background-color;
-		color: @font-swatch7-color;
-		text-decoration: none;
-		text-transform: uppercase;
-		text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-		letter-spacing: 1px;
-		&:hover {
-		  background-color: @font-swatch7-background-color-hover;
-		  cursor: pointer;
-		}
-		@media @mobile {
-			padding: 8px 14px;
-		}
-  }
-} */
 
 .widget.ecomproductslist .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
