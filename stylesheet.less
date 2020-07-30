@@ -6,6 +6,14 @@ body {
 	padding: 0;
 }
 
+a {
+    color: fade(@font-swatch5-color, 60%);
+    
+    &:hover {
+        color: @font-swatch5-color;
+    }
+}
+
 /* ===============================
    CUSTOM CSS
    =============================== */
@@ -15,8 +23,7 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	overflow: hidden;
-    overflow-y: auto;
+	overflow: hidden auto;
 	background: @color-swatch7;
 	width: 22%;
 	height: 100%;
@@ -506,8 +513,8 @@ header nav {
 		min-height: 45px;
 		@media @tablet {
 			display: block;
-			background-color: @color-swatch7;
 			margin-bottom: 0;
+			overflow: inherit;
 		}
 		.extendednavigation {
 			display: table-cell;
@@ -525,9 +532,7 @@ header nav {
 			margin: 0 auto;
 			padding: 0;
 			@media @tablet {
-				/* Hidden until nav icon is clicked */
 				display: none;
-				/* Then these styles are applied */
 				width: 90%;
 				margin: 0 5%;
 				padding: 55px 0 0;
@@ -589,9 +594,9 @@ header nav {
 				}
 
 				&.folder {
-					/* Folder dropdown arrow BG style goes Here */  
 					cursor: pointer;
 					background-image: none;
+					margin-right: 0;
 					.text {
 						display: block;
 						font-family: @font-swatch6-font-family;
@@ -601,7 +606,7 @@ header nav {
 						line-height: @font-swatch6-line-height;
 						letter-spacing: @font-swatch6-letter-spacing;
 						position: relative;
-						padding: 14px 10px;
+						padding: 14px 22px 14px 10px;
 						&:after {
 							content: "\25BC";
 							font-size: 5px;
@@ -619,7 +624,7 @@ header nav {
 							}
 						}
 						@media @tablet {
-						  padding: 10px 8px;
+						  padding: 10px 22px 10px 8px;
 						}
 					}
 					ul {
@@ -670,11 +675,11 @@ header nav {
 						position: absolute;
 						width: 20px;
 						height: 3px;
-						background: @color-swatch1;
+						background: @font-swatch6-color;
 						top: 15px;
 						left: 50%;
 						margin-left: -10px;
-						box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+						box-shadow: 0 6px 0 @font-swatch6-color, 0 12px 0 @font-swatch6-color;
 					}
 				}
 				@media @mobile {
@@ -694,14 +699,11 @@ header nav {
 .widget.extendednavigation ul li.selected,
 .widget.extendednavigation ul li:hover ul li.selected, 
 .widget.extendednavigation ul li.folder.selected ul li.selected, 
-.widget.extendednavigation ul li.folder.selected {
+.widget.extendednavigation ul li.folder.selected,
+.widget.extendednavigation ul li.folder.selected ul li{
 	a, .text {
-		color: @color-swatch1;
+		color: fade(@font-swatch6-color, 40%);
 	}
-}
-
-.extendednavigation ul li.folder.selected ul li .text {
-	color: @color-swatch1;
 }
 
 .widget .extendednavigation ul li.folder:after {
