@@ -3,6 +3,7 @@
 	"thumbnail":"thumbnail.png",
 	"screenshot":"bodyhealth-screenshot.jpg",
 	"templateType":"standard",
+    "versionTenCompatible": 1,
 	"pageTypes":["home"],
     "tags": {
     "en": ["turism", "clean", "modern", "colorful", "colourful", "flexible", "open", "vertical menu", "spa", "serif", "travel", "hospitality", "holiday", "hotel", "wellness"],

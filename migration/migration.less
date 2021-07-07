@@ -1,0 +1,111 @@
+
+// -------------------------------------------
+//  Migration Styles -
+//
+//  These changes allow rows to work with
+//  existing templates in BK10
+// -------------------------------------------
+
+
+
+// Template styling resets
+// ------------------------------------
+
+#migrated {
+
+    &.edit:not(.row-add-mode) {
+        @media only screen and (min-width: 930px) {
+            .nav {
+                left: 100px;
+                z-index: 0;
+            }
+        }
+
+        @media only screen and (min-width: 760px) and (max-width: 1290px) {
+            .nav {
+                width: 250px;
+            }
+
+            .zone-area {
+                padding-left: 250px;
+            }
+        }
+    }
+
+	.main.wrapper {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+
+    .widget.content {
+        overflow: visible;
+    }
+
+    .bk-footer {
+    	margin-top: 0;
+    }
+
+    .row-overlay:before {
+        display: none!important;
+    }
+}
+
+
+
+// Row improvments
+// ------------------------------------
+
+#migrated {
+	.row--layout-hero-5a .signupform fieldset input {
+		width: auto;
+	}
+
+	.row--layout-gallery-rounded .widget.gallery .image-data {
+		text-align: center;
+	}
+}
+
+
+
+// Re-add the reset styles
+// ------------------------------------
+
+#migrated {
+
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    [data-name="row"] .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 960px;
+        width: 90%;
+    }
+
+    // Move spacing to first widget in the main zone (not sections)
+    .edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 3em;
+    }
+
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 6em;
+
+        @media @mobile {
+            margin-bottom: 3em;
+        }
+    }
+
+    // Add spacing to the top of a widget when it follows a section
+    #page-zones__main > .row + .widget:not([data-name="row"]) {
+        margin-top: 20px;
+    }
+
+    // Empy zone spacing
+    &.edit #page-zones__main:empty {
+        margin-bottom: 3em;
+        margin-top: 3em;
+    }
+}

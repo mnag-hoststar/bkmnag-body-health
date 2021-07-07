@@ -6,11 +6,80 @@ body {
 	padding: 0;
 }
 
+
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+
+h1, h2, h3, h4, h5, h6,
+[class*="contentgroup__h"],
+.blog-post-title a,
+blockquote:before,
+.widget.image .image-title,
+label,
+.ecom-productslist-title {
+  .style--light & {
+    color: @contrast--light;
+  }
+
+  .style--accent & {
+    color: @contrast--accent;
+  }
+
+  .style--dark & {
+    color: @contrast--dark;
+  }
+}
+
+p, ul, ol, li,
+.contentgroup__body,
+.widget.clicktocall a,
+.widget.clicktocall a:hover,
+blockquote,
+.widget.image .image-description,
+.blog-post-published-date {
+  .style--light & {
+    color: fade(@contrast--light, 90%);
+  }
+
+  .style--accent & {
+    color: fade(@contrast--accent, 90%);
+  }
+
+  .style--dark & {
+    color: fade(@contrast--dark, 90%);
+  }
+}
+
 a {
     color: fade(@font-swatch5-color, 60%);
+
+    .style--light & {
+        color: fade(@contrast--light, 80%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 80%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 80%);
+    }
     
     &:hover {
         color: @font-swatch5-color;
+
+        .style--light & {
+	        color: fade(@contrast--light, 90%);
+	    }
+
+	    .style--accent & {
+	        color: fade(@contrast--accent, 90%);
+	    }
+
+	    .style--dark & {
+	        color: fade(@contrast--dark, 90%);
+	    }
     }
 }
 
@@ -810,8 +879,7 @@ header nav {
   margin: 0;
 }
 
-.widget.feature button:hover 
-{
+.widget.feature button:hover {
   background-color: fade(@color-swatch3, 90%);
   color: @font-swatch7-color;
   cursor: pointer;
@@ -865,12 +933,40 @@ blockquote {
 	background-color: @color-swatch1;
 	border: 1px solid darken(@color-swatch6, 10%);
 	border-radius: 4px;
+
+	.style--light & {
+      background-color: darken(@color--light, 5%);
+      border-color: darken(@color--light, 10%);
+  }
+
+  .style--accent & {
+    background-color: lighten(@color--accent, 5%);
+    border-color: darken(@color--accent, 10%);
+  }
+
+  .style--dark & {
+    background-color: lighten(@color--dark, 5%);
+    border-color: darken(@color--dark, 10%);
+  }
+
 	&:before {
 		content: open-quote;
 		left: 10px;
 		top: 20px;
 		font-family: georgia;
 		color: darken(@color-swatch6, 10%);
+
+		.style--light & {
+    	color: darken(@color--light, 20%);
+    }
+
+    .style--accent & {
+      color: lighten(@color--accent, 20%);
+    }
+
+    .style--dark & {
+      color: lighten(@color--dark, 20%);
+    }
 	}
 	&:after {
 		content: no-close-quote;
@@ -881,8 +977,7 @@ blockquote {
    IMAGE WIDGET
    =============================== */
 
-.widget.image img
-{
+.widget.image img {
 	display:block;
 	max-width: 100%;
 	border: 0;
@@ -907,6 +1002,18 @@ blockquote {
 
 .widget.image span.image-title:hover {
   color: lighten(@font-swatch4-color,30%);
+
+  .style--light & {
+    	color: lighten(@contrast--light, 15%);
+  }
+
+  .style--accent & {
+      color: lighten(@contrast--accent, 15%);
+  }
+
+  .style--dark & {
+      color: lighten(@contrast--dark, 15%);
+  }
 }
 
 .widget.image span.image-description {
@@ -923,29 +1030,65 @@ blockquote {
    BUTTON CSS
    =============================== */
 
-.widget.button button {
+.widget.button button,
+a.contentgroup__link {
   padding: 14px 40px;
   margin: 0;
   border: none;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 
+.widget.filedownload button,
+.widget.button button,
+.productlist-search .btn,
+a.contentgroup__link {
+	background-color: @font-swatch7-background-color;
+  color: @font-swatch7-color;
+  text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 
-.widget.button button:hover 
-{
+  .style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--accent, 10%)
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%);
+  }
+}
+
+.widget.filedownload button:hover,
+.widget.button button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
+
+	.style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: darken(@color--light, 7.5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--light, 5%);
+	}
 }
 
 /* ===============================
@@ -957,6 +1100,18 @@ hr.line {
    height: 1px;
    width: 100%;
    border: none;
+
+   	.style--light & {
+      background-color: darken(@color--light, 12%);
+    }
+
+    .style--accent & {
+      background-color: darken(@color--accent, 12%);
+    }
+
+    .style--dark & {
+      background-color: lighten(@color--dark, 15%);
+    }
 }
 
 /* ===============================
@@ -977,7 +1132,6 @@ hr.line {
 		span.inner {
 			.title,
 			.description {
-				// Font
 				color: @color-swatch1;
 				font-family: @font-swatch4-font-family;
 				letter-spacing: @font-swatch4-letter-spacing;
@@ -1041,6 +1195,18 @@ hr.line {
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
 	text-decoration: none;
+
+	.style--light & {
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 .widget.clicktocall a:hover {
@@ -1055,10 +1221,34 @@ hr.line {
    font-family: @font-swatch5-font-family;
    color: @color-swatch3;
    font-size: @font-swatch5-font-size;
+
+ 	.style--light & {
+    color: @color--accent;
+  }
+
+  .style--accent & {
+    color: @contrast--accent;
+  }
+
+  .style--dark & {
+    color: @contrast--dark;
+  }
 }
 
 .widget.twitter .twitter-content p {
   color: @font-swatch5-color;
+
+  .style--light & {
+    color: fade(@contrast--light, 90%);
+  }
+
+  .style--accent & {
+    color: fade(@contrast--accent, 90%);
+  }
+
+  .style--dark & {
+    color: fade(@contrast--dark, 90%);
+  }
 }
 
 .widget.twitter a:hover {
@@ -1071,7 +1261,7 @@ hr.line {
 	border: none;
 }
 
-.widget.twitter ul li {
+.widget.twitter ul.twitter > li {
 	border-bottom: none;
 	list-style: none;
 	font-family: @font-swatch5-font-family;
@@ -1082,6 +1272,24 @@ hr.line {
 	border: 1px solid darken(@color-swatch6,10%);
 	border-radius: 4px;
 	background-color: @color-swatch1;
+
+	.style--light & {
+      background-color: darken(@color--light, 5%);
+      border-color: darken(@color--light, 10%);
+      color: fade(@contrast--light, 90%);
+  }
+
+  .style--accent & {
+    background-color: lighten(@color--accent, 5%);
+    border-color: darken(@color--accent, 10%);
+    color: fade(@contrast--accent, 90%);
+  }
+
+  .style--dark & {
+    background-color: lighten(@color--dark, 5%);
+    border-color: darken(@color--dark, 10%);
+    color: fade(@contrast--dark, 90%);
+  }
 }
 
 .widget.twitter .twitter-profile-pic {
@@ -1105,11 +1313,6 @@ ul.twitter {
 	}
 }
 
-.widget.profile ul.twitter {
-  // margin: 0 auto;
-}
-
-
 .widget.profile ul.twitter .twitter-content {
 	padding-left: 0;
 }
@@ -1124,16 +1327,40 @@ ul.twitter {
   font-family: @font-swatch5-font-family;
   font-size: 12px;
   color: lighten(@font-swatch5-color, 30%);
+
+  .style--light & {
+    color: fade(@contrast--light, 70%);
+  }
+
+  .style--accent & {
+    color: fade(@contrast--accent, 70%);
+  }
+
+  .style--dark & {
+    color: fade(@contrast--dark, 70%);
+  }
 }
 
 .widget.twitter .twitter-content span.bk-full-name {
 	font-family: @font-swatch5-font-family;
-	color: @color-swatch3;
 	font-size: @font-swatch5-font-size;
 }
 
+.widget.twitter .twitter-content span.bk-full-name,
 .widget.twitter .twitter-content span a {
    color: @color-swatch3;
+
+  .style--light & {
+    color: @color--accent;
+  }
+
+  .style--accent & {
+    color: @contrast--accent;
+  }
+
+  .style--dark & {
+    color: @contrast--dark;
+  }
 }
 
 .widget.twitter .twitter-content span.bk-full-name:hover, .widget.twitter .twitter-content span a:hover {
@@ -1152,6 +1379,18 @@ ul.twitter {
 	line-height:@font-swatch5-line-height;
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
+
+	.style--light & {
+    color: fade(@contrast--light, 90%);
+  }
+
+  .style--accent & {
+    color: fade(@contrast--accent, 90%);
+  }
+
+  .style--dark & {
+    color: fade(@contrast--dark, 90%);
+  }
 }
 
 .contactform button, .contactform button.btn, .advancedcontactform button, .advancedcontactform button.btn {
@@ -1168,12 +1407,44 @@ ul.twitter {
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 	letter-spacing: 1px;
 	border-radius: 4px;
+
+	.style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%)
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%);
+  }
+
 	@media @mobile {
 		width: 100%;
 	}
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
+
+		.style--light & {
+			background-color: darken(@color--accent, 5%);
+		}
+
+		.style--accent & {
+			background-color: darken(@color--light, 5%);
+		}
+
+		.style--dark & {
+			background-color: darken(@color--light, 5%);
+		}
 	}
 }
 
@@ -1181,12 +1452,6 @@ ul.twitter {
 /* ===============================
    TWEET THIS
    =============================== */
-
-.widget.tweet .tweet{
-/*   margin: 0 0 10px;
-   padding: 14px 0;
-   */
-}
 
 .widget.tweet a {
   margin: 0;
@@ -1207,11 +1472,41 @@ ul.twitter {
   text-transform: uppercase;
   text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
   letter-spacing: 1px;
+
+  .style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%)
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%);
+  }
 }
 
 .widget.tweet a:hover, .tweet a:active {
   cursor: pointer;
   background-color: @font-swatch7-background-color-hover;
+
+  .style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: darken(@color--light, 5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--light, 5%);
+	}
 }
 
 /* ===============================
@@ -1239,10 +1534,40 @@ ul.twitter {
   text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
   letter-spacing: 1px;
   cursor: pointer;
+
+  .style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%)
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%);
+  }
 }
 
 .widget.dropbox .b-wrap .btn:hover {
   background-color: @font-swatch7-background-color-hover;
+
+  .style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: darken(@color--light, 5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--light, 5%);
+	}
 }
 
 .widget.dropbox .b-wrap .file-name {
@@ -1253,6 +1578,18 @@ ul.twitter {
   color: @font-swatch5-color;
   letter-spacing: @font-swatch5-letter-spacing;
   padding-left: 5px;
+
+  .style--light & {
+		color: fade(@contrast--light, 90%);
+	}
+
+	.style--accent & {
+		color: fade(@contrast--accent, 90%);
+	}
+
+	.style--dark & {
+		color: fade(@contrast--dark, 90%);
+	}
 }
 
 /* ===============================
@@ -1280,10 +1617,40 @@ ul.twitter {
   text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
   letter-spacing: 1px;
   cursor: pointer;
+
+  .style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%)
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%);
+  }
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
   background-color: @font-swatch7-background-color-hover;
+
+  .style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: darken(@color--light, 5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--light, 5%);
+	}
 }
 
 /* ==================================
@@ -1320,6 +1687,21 @@ ul.twitter {
 	overflow: hidden;
 	white-space: nowrap;
 	border: none;
+
+	.style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+  }
 }
 
 .widget.profile .bk-profile-socialicons span a {
@@ -1328,6 +1710,18 @@ ul.twitter {
 
 .widget.socialicons span a:hover {
    background-color: darken(@color-swatch3, 10%);
+
+ 	.style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: darken(@color--light, 5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--light, 5%);
+	}
 }
 
 .widget.profile .bk-profile-socialicons span a:hover {
@@ -1506,10 +1900,6 @@ color: @color-swatch5;
 
 /* FOOTER PROFILE - SINGLE EMAIL FORM */
 
-.widget.profile form fieldset {
-  //margin: 0 auto;
-}
-
 .widget.profile form fieldset input {
 	background-color: @color-swatch1;
 	border: 1px solid darken(@color-swatch6, 10%);
@@ -1594,10 +1984,34 @@ input, select, textarea {
 	text-indent: 8px;
 	padding: 0;
 	border-radius: 4px;
+
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+    background-color: darken(@color--light, 5%);
+    border-color: darken(@color--light, 10%);
+    color: fade(@contrast--light, 90%);
+  }
+
 	&:focus {
 		outline: none;
 		box-shadow: 0 0 5px fade(@color-swatch3, 20%);
 		border-color: darken(@color-swatch6, 15%);
+
+		.style--light & {
+			border-color: darken(@color--light, 15%);
+			box-shadow: 0 0 5px darken(@color--light, 10%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 15%);
+			box-shadow: 0 0 5px darken(@color--accent, 10%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 15%);
+			box-shadow: 0 0 5px darken(@color--dark, 10%);
+		}
 	}
 }
 
@@ -1707,40 +2121,55 @@ label {
 					line-height: bkscale(@font-swatch1-line-height, 0.4);
 				}
 
-			
-
 				a {
 					color: @color-swatch3;
 					text-decoration: none;
+
+					.style--light & {
+		        color: @color--accent;
+			    }
+
+			    .style--accent & {
+		        color: @contrast--accent;
+			    }
+
+			    .style--dark & {
+		        color: @contrast--dark;
+			    }
+
 					&:hover {
 						border-bottom: 1px solid @color-swatch3;
+
+						.style--light & {
+			        border-color: @color--accent;
+				    }
+
+				    .style--accent & {
+			        border-color: @contrast--accent;
+				    }
+
+				    .style--dark & {
+			        border-color: @contrast--dark;
+				    }
 					}
 				}
 			}
 
 			.blog-post-summary, .blog-post-body {
 				margin-bottom: 1em;
-				
 			}
 
 			.blog-post-more-link {
 				float: left;
 				width: auto;
-				a {
-										
-				}
 			}
 			.blog-post-date {
-				float: right;				
-				
+				float: right;
 			}
 		}
 	}
 	.blog-list-footer {
 		padding: 0;
-		a {
-
-		}
 	}
 }
 
@@ -1758,9 +2187,40 @@ label {
 	letter-spacing: 1px;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 	border-radius: 4px;
-	&:hover{
+
+	.style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%)
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%);
+  }
+
+	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
+
+		.style--light & {
+			background-color: darken(@color--accent, 5%);
+		}
+
+		.style--accent & {
+			background-color: darken(@color--light, 5%);
+		}
+
+		.style--dark & {
+			background-color: darken(@color--light, 5%);
+		}
 	}
 }
 
@@ -1785,6 +2245,15 @@ label {
 		margin-bottom: 30px;
 		padding: 0;
 		border-radius: 4px;
+
+		.style--light &,
+		.style--accent &,
+		.style--dark & {
+	    background-color: darken(@color--light, 5%);
+	    border-color: darken(@color--light, 10%);
+	    color: fade(@contrast--light, 90%);
+	  }
+
 		@media @tablet {
 		  width: 100%;
 		  margin-bottom: 15px;
@@ -1808,6 +2277,25 @@ label {
 		text-transform: uppercase;
 		text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 		letter-spacing: 1px;
+
+		.style--light & {
+			background-color: @color--accent;
+			color: @contrast--accent;
+			text-shadow: 0 1px 1px darken(@color--accent, 10%);
+		}
+
+		.style--accent & {
+			background-color: @color--light;
+			color: @contrast--light;
+		  text-shadow: 0 1px 1px darken(@color--light, 10%)
+		}
+
+		.style--dark & {
+			background-color: @color--light;
+			color: @contrast--light;
+		  text-shadow: 0 1px 1px darken(@color--light, 10%);
+		}
+
 		@media @tablet {
 			width: 100%;
 			margin-left: 0;
@@ -1828,6 +2316,18 @@ label {
 .blog-search-submit-button:hover {
 	background-color: @font-swatch7-background-color-hover;
 	cursor: pointer;
+
+	.style--light & {
+	  background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+	  background-color: darken(@color--light, 5%);
+	}
+
+	.style--dark & {
+	  background-color: darken(@color--light, 5%);
+	}
 }
 
 /* ===============================
@@ -1867,7 +2367,6 @@ time.blog-post-published-date, footer.blog-post-metadata time {
 	padding: 1em 0;
 	display: inline-block;
 	font-size: @font-swatch5-font-size;
-
 }
 
 time.blog-post-published-date {
@@ -1886,7 +2385,6 @@ footer.blog-post-metadata time {
 .container-outer .li-profile-container {
   padding: 0;
   margin: 0;
-
 }
 
 .no-profile {
@@ -1911,7 +2409,7 @@ footer.blog-post-metadata time {
    SIGNUPFORM WIDGET
    =============================== */
 
- .widget.signupform {
+.widget.signupform {
 	display: block;
 	margin: 20px 0;
 }
@@ -1931,6 +2429,18 @@ footer.blog-post-metadata time {
 	line-height:@font-swatch5-line-height;
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
+
+	.style--light & {
+    color: @contrast--light;
+  }
+
+  .style--accent & {
+    color: @contrast--accent;
+  }
+
+  .style--dark & {
+    color: @contrast--dark;
+  }
 }
 
 .widget.signupform fieldset input {
@@ -1946,6 +2456,15 @@ footer.blog-post-metadata time {
 	margin-bottom: 30px;
 	padding: 0;
 	border-radius: 4px;
+
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+    background-color: darken(@color--light, 5%);
+    border-color: darken(@color--light, 10%);
+    color: fade(@contrast--light, 90%);
+  }
+
 	@media @mobile {
 		width: 100%;
 		margin-bottom: 15px;
@@ -1955,6 +2474,21 @@ footer.blog-post-metadata time {
 .widget.signupform fieldset input:focus {
 	outline: none;
 	box-shadow: 0 0 5px fade(@color-swatch3, 20%);
+
+	.style--light & {
+		border-color: darken(@color--light, 15%);
+		box-shadow: 0 0 5px darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+		border-color: darken(@color--accent, 15%);
+		box-shadow: 0 0 5px darken(@color--accent, 10%);
+	}
+
+	.style--dark & {
+		border-color: darken(@color--dark, 15%);
+		box-shadow: 0 0 5px darken(@color--dark, 10%);
+	}
 }
 
 .widget.signupform fieldset button.btn {
@@ -1974,6 +2508,25 @@ footer.blog-post-metadata time {
 	text-transform: uppercase;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 	letter-spacing: 1px;
+
+	.style--light & {
+  	background-color: @color--accent;
+  	color: @contrast--accent;
+  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+  }
+
+  .style--accent & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%)
+  }
+
+  .style--dark & {
+  	background-color: @color--light;
+  	color: @contrast--light;
+    text-shadow: 0 1px 1px darken(@color--light, 10%);
+  }
+
 	@media @mobile {
 		width: 100%;
 	}
@@ -1982,6 +2535,18 @@ footer.blog-post-metadata time {
 .widget.signupform fieldset button.btn:hover {
 	background-color: @font-swatch7-background-color-hover;
 	cursor: pointer;
+
+	.style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: darken(@color--light, 5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--light, 5%);
+	}
 }
 
 /* ===============================
@@ -1995,11 +2560,11 @@ footer.blog-post-metadata time {
 }
 
 .widget .embed .embed-content {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .widget .embed .embed-content iframe {
-    width: 100%;
+  width: 100%;
 	height: auto;
 }
 
@@ -2076,9 +2641,34 @@ footer.blog-post-metadata time {
 			-moz-border-radius: 50%;
 			border-radius: 50%;
 			background-color: darken(@color-swatch6, 10%);
+
+			.style--light & {
+        background-color: darken(@color--light, 10%);
+	    }
+
+	    .style--accent & {
+        background-color: lighten(@color--accent, 10%);
+	    }
+
+	    .style--dark & {
+        background-color: lighten(@color--dark, 15%);
+	    }
+
 			&.selected {
 				background-color: @color-swatch3;
 				border: none;
+
+				.style--light & {
+	        background-color: @color--accent;
+		    }
+
+		    .style--accent & {
+	        background-color: @contrast--accent;
+		    }
+
+		    .style--dark & {
+	        background-color: @contrast--dark;
+		    }
 			}
 		}
 	}
@@ -2708,11 +3298,9 @@ footer.blog-post-metadata time {
 							-webkit-align-self: auto;
 							-ms-flex-item-align: auto;
 							align-self: auto;
-							border: 1px solid darken(@color-swatch6, 10%);
 							background-color: @color-swatch1;
 							font-family: @font-swatch5-font-family;
 							font-size: @font-swatch5-font-size;
-							color: @color-swatch5;
 							text-indent: 8px;
 							border-radius: 4px;
 						}
@@ -2740,11 +3328,8 @@ footer.blog-post-metadata time {
 							font-family: @font-swatch7-font-family;
 							font-size: @font-swatch7-font-size;
 							font-weight:@font-swatch7-font-weight;
-							background-color: @font-swatch7-background-color;
-							color: @font-swatch7-color;
 							text-decoration: none;
 							text-transform: uppercase;
-							text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 							letter-spacing: 1px;
 						}
 					}
@@ -2754,7 +3339,6 @@ footer.blog-post-metadata time {
 		
 		.productlist-item-count {
 			text-align: center;
-			color: fade(@color-swatch5, 60%);
 			font-size: bkscale(@font-swatch5-font-size, 0.8);
 			margin: 1em 0;
 		}
@@ -2791,6 +3375,12 @@ select[name="displayCount"] {
 	margin-bottom: 0;
 }
 
+.widget.ecomproductslist .ecom-productslist-image-wrap,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap {
+	margin-left: 0;
+	max-width: 100%;
+}
+
 .widget.ecomproductslist .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
 	background-color: transparent;
@@ -2815,6 +3405,19 @@ select[name="displayCount"] {
 		padding-top: 1em;
 		border-top: 1px solid darken(@color-swatch6,10%);
 		margin-top: 10px;
+
+		.style--light & {
+      border-color: darken(@color--light, 12%);
+    }
+
+    .style--accent & {
+      border-color: lighten(@color--accent, 12%);
+    }
+
+    .style--dark & {
+      border-color: lighten(@color--dark, 12%);
+    }
+
 		@media @mobile {
 			border-top: none;
 			padding-top: 0;
@@ -2826,6 +3429,18 @@ select[name="displayCount"] {
 			line-height: @font-swatch3-line-height;
 			color: @font-swatch3-color;
 			padding: 0;
+
+			.style--light & {
+				color: @color--accent;
+			}
+
+			.style--accent & {
+				color: @contrast--accent;
+			}
+
+			.style--dark & {
+				color: @contrast--dark;
+			}
 		}
 	}
 	a:hover {
@@ -2833,6 +3448,18 @@ select[name="displayCount"] {
 		.ecom-productlist-info, .ecom-featuredproducts-info {
 			.ecom-productslist-title, .ecom-featuredproducts-title, .ecom-productlist-price, .ecom-featuredproducts-price {
 				color: @color-swatch7;
+
+				.style--light & {
+					color: @color--accent;
+				}
+
+				.style--accent & {
+					color: @contrast--accent;
+				}
+
+				.style--dark & {
+					color: @contrast--dark;
+				}
 			}
 		}
 	}
@@ -2843,9 +3470,37 @@ select[name="displayCount"] {
 	padding-top: 1em;
 	margin-top: 3em;
 	margin-bottom: 5em;
+
+	.style--light & {
+    border-color: darken(@color--light, 12%);
+  }
+
+  .style--accent & {
+    border-color: lighten(@color--accent, 12%);
+  }
+
+  .style--dark & {
+    border-color: lighten(@color--dark, 12%);
+  }
+
 	.productlist-pagination-page.current {
 		color: @color-swatch3;
 		border: 1px solid @color-swatch3;
+
+		.style--light & {
+      border-color: @color--accent;
+      color: @color--accent;
+    }
+
+    .style--accent & {
+      border-color: @color--accent;
+      color: @contrast--accent;
+    }
+
+    .style--dark & {
+      border-color: @color--dark;
+      color: @contrast--dark;
+    }
 	}
 	.productlist-pagination-page {
 		font-family: @font-swatch7-font-family;
@@ -2856,8 +3511,36 @@ select[name="displayCount"] {
 		border: 1px solid darken(@color-swatch6,10%);
 		margin: 5px 10px 0 0;
 		text-decoration: none;
+
+		.style--light & {
+      border-color: darken(@color--light, 12%);
+      color: fade(@color--accent, 80%);
+    }
+
+    .style--accent & {
+      border-color: lighten(@color--accent, 12%);
+      color: fade(@contrast--accent, 90%);
+    }
+
+    .style--dark & {
+      border-color: lighten(@color--dark, 12%);
+      color: fade(@contrast--dark, 90%);
+    }
+
 		&:hover {
 			border: 1px solid darken(@color-swatch6, 30%);
+
+			.style--light & {
+	      border-color: darken(@color--light, 20%);
+	    }
+
+	    .style--accent & {
+	      border-color: lighten(@color--accent, 20%);
+	    }
+
+	    .style--dark & {
+	      border-color: lighten(@color--dark, 20%);
+	    }
 		}
 	}
 }
@@ -2884,6 +3567,18 @@ select[name="displayCount"] {
 	background: none;
 	border-bottom: 1px solid darken(@color-swatch6, 10%);
 	margin-left: 0;
+
+		.style--light & {
+      border-color: darken(@color--light, 12%);
+    }
+
+    .style--accent & {
+      border-color: lighten(@color--accent, 12%);
+    }
+
+    .style--dark & {
+      border-color: lighten(@color--dark, 12%);
+    }
 }
 
 .ecom-featuredproducts-header h2 {
@@ -2958,7 +3653,7 @@ a.btn.ecombasket-summary-link {
   margin: 1em 0;
   border-radius: 4px;
   &:hover {
-	background-color: @font-swatch7-background-color-hover;
+		background-color: @font-swatch7-background-color-hover;
   }
 }
 
@@ -3025,8 +3720,8 @@ a.btn.ecombasket-summary-link {
 		  letter-spacing: 1px;
 		  display: inline-block;
 		  &:hover {
-			background-color: @font-swatch7-background-color-hover;
-			cursor: pointer;
+				background-color: @font-swatch7-background-color-hover;
+				cursor: pointer;
 		  }
 	}
 	.basket-summary-items-table {
@@ -3060,25 +3755,9 @@ a.btn.ecombasket-summary-link {
 			}
 			@media @mobile {
 				display: table;
-				th:nth-child(3) {
-					//display: none;
-				}
 				td {
-					/*padding: 1em 0 0;
-					float: left;
-					width: 100%;
-					border-bottom: none; */
 					&:nth-child(1), &:nth-child(2), &:nth-child(3) {
 						width: 33%;
-					}
-					&:nth-child(3) {
-						/* text-align: left;
-						padding: 0 0 1em;
-						color: @color-swatch4;
-						border-bottom: 1px solid fade(@color-swatch5,10%); */
-					}
-					&.basket-summary-amount {
-						//padding: 1em 0;
 					}
 				}
 			}
