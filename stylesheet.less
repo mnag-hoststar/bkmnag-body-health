@@ -1,8 +1,6 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
-/* ===============================
-   MIXINS
-   =============================== */
+// MIXINS
 
 .appearance(@appearance: none) {
     -webkit-appearance: @appearance;
@@ -10,9 +8,7 @@
     appearance: @appearance;
 }
 
-/* ===============================
-   MAIN
-   =============================== */
+// MAIN
 
 body {
 	background-color: @color-swatch6;
@@ -20,9 +16,7 @@ body {
 	padding: 0;
 }
 
-/* ===============================
-   TYPOGRAPHY
-   =============================== */
+// TYPOGRAPHY
 
 h1, h2, h3, h4, h5, h6,
 [class*="contentgroup__h"],
@@ -33,17 +27,17 @@ label,
 .ecom-productslist-title {
 	word-break: break-word;
 
-  .style--light & {
-    color: @contrast--light;
-  }
+	.style--light & {
+		color: @contrast--light;
+	}
 
-  .style--accent & {
-    color: @contrast--accent;
-  }
+	.style--accent & {
+		color: @contrast--accent;
+	}
 
-  .style--dark & {
-    color: @contrast--dark;
-  }
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 p, ul, ol, li,
@@ -53,17 +47,17 @@ p, ul, ol, li,
 blockquote,
 .widget.image .image-description,
 .blog-post-published-date {
-  .style--light & {
-    color: fade(@contrast--light, 90%);
-  }
+	.style--light & {
+		color: fade(@contrast--light, 90%);
+	}
 
-  .style--accent & {
-    color: fade(@contrast--accent, 90%);
-  }
+	.style--accent & {
+		color: fade(@contrast--accent, 90%);
+	}
 
-  .style--dark & {
-    color: fade(@contrast--dark, 90%);
-  }
+	.style--dark & {
+		color: fade(@contrast--dark, 90%);
+	}
 }
 
 a {
@@ -98,9 +92,7 @@ a {
     }
 }
 
-/* ===============================
-   CUSTOM CSS
-   =============================== */
+// CUSTOM CSS
 
 .nav {
 	position: fixed;
@@ -130,9 +122,11 @@ a {
 
 .zone-area {
 	padding-left: 22%;
+
 	@media only screen and (min-width: 1290px) {
 		padding-left: 250px;
 	}
+	
 	@media @tablet {
 		padding-left:0;
 	}
@@ -141,6 +135,7 @@ a {
 .main {
 	clear: both;
 	padding: 3em 0;
+
 	.widget {
 		clear: both;
 	}
@@ -153,55 +148,59 @@ a {
 }
 
 
-/* ===============================
-   HEADER
-   =============================== */
+// HEADER
 
 .bk-pt-default header {
-  background-color: @color-swatch1;
+	background-color: @color-swatch1;
 }
 
- .bk-header {
-  background-color: @color-swatch1;
- }
+.bk-header {
+	background-color: @color-swatch1;
+}
 
 .header-container {
-  padding: 0px;
+	padding: 0px;
 }
 
 .header-content-widgets {
-  background-color: @color-swatch3;
-  display: inline-block;
-  width: 100%;
-  padding: 20px 20px;
-  @media only screen and (max-width: 1400px) {
-	margin-left: 0;
-  }
-  @media @tablet {
+	background-color: @color-swatch3;
+	display: inline-block;
+	width: 100%;
+	padding: 20px 20px;
+
+	@media only screen and (max-width: 1400px) {
+		margin-left: 0;
+	}
+
+	@media @tablet {
 		padding: 3% 5%;
 	}
-  .header-left {
-	width: 50%;
-	text-align: left;
-	float: left;
-	padding-right: 20px;
-	  @media @tablet {
-		width: 100%;
-		text-align: center;
-		padding-right: 0;
-	  }
-  }
-  .header-right {
-	width: 50%;
-	text-align: right;
-	display: inline-block;
-	padding-left: 20px;
-	  @media @tablet {
-		width: 100%;
-		text-align: center;
-		padding-left: 0;
-	  }
-  }
+
+	.header-left {
+		width: 50%;
+		text-align: left;
+		float: left;
+		padding-right: 20px;
+
+		@media @tablet {
+			width: 100%;
+			text-align: center;
+			padding-right: 0;
+		}
+	}
+
+	.header-right {
+		width: 50%;
+		text-align: right;
+		display: inline-block;
+		padding-left: 20px;
+
+		@media @tablet {
+			width: 100%;
+			text-align: center;
+			padding-left: 0;
+		}
+	}
 }
 
 .header-content-widgets .widget.content {
@@ -209,54 +208,54 @@ a {
 }
 
 .header-content-widgets .widget.content span {
-  display: inline-block;
-  color: @color-swatch1;
+	display: inline-block;
+	color: @color-swatch1;
 }
 
 .header-content-widgets .widget.content p {
-  font-size: @font-swatch5-font-size;
-  line-height: @font-swatch5-line-height;
-  color: @color-swatch1;
-  font-size: @font-swatch5-font-size;
-  font-family: @font-swatch5-font-family;
-  line-height: @font-swatch5-line-height;
-  font-weight: @font-swatch5-font-weight;
-  padding: 0;
+	font-size: @font-swatch5-font-size;
+	line-height: @font-swatch5-line-height;
+	color: @color-swatch1;
+	font-size: @font-swatch5-font-size;
+	font-family: @font-swatch5-font-family;
+	line-height: @font-swatch5-line-height;
+	font-weight: @font-swatch5-font-weight;
+	padding: 0;
 }
 
 /* SUB NAV */
 
 header nav {
-  width: 100%;
-  background-color: @color-swatch7;
+	width: 100%;
+	background-color: @color-swatch7;
 }
 
 .companyheader {
-  display: block;
-  padding: 3% 5%;
-  float: none;
-  background-color: @color-swatch1;
+	display: block;
+	padding: 3% 5%;
+	float: none;
+	background-color: @color-swatch1;
 }
 
 /* COMPANY NAME */
 
 .widget.companyname {
-  text-align: center;
-  overflow: hidden;
-  float: none;
+	text-align: center;
+	overflow: hidden;
+	float: none;
 }
 
 .companyname a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .widget.companyname a {
-  font-family:@font-swatch10-font-family;
-  font-weight: @font-swatch10-font-weight;
-  color:@font-swatch10-color;
-  line-height:@font-swatch10-line-height;
-  letter-spacing: @font-swatch10-letter-spacing;
-  font-size: @font-swatch10-font-size;
+	font-family:@font-swatch10-font-family;
+	font-weight: @font-swatch10-font-weight;
+	color:@font-swatch10-color;
+	line-height:@font-swatch10-line-height;
+	letter-spacing: @font-swatch10-letter-spacing;
+	font-size: @font-swatch10-font-size;
 }
 
 /* LOGO */
@@ -266,9 +265,7 @@ header nav {
   float: none;
 }
 
-/* ===============================
-   FOOTER
-   =============================== */
+// FOOTER
 
 .bk-footer {
 	background-color: @color-swatch1;
@@ -290,17 +287,17 @@ header nav {
 .gdpr-footer {
     background-color: @color-swatch1;
 	padding-left: 22%;
+
 	@media only screen and (min-width: 1290px) {
 		padding-left: 250px;
 	}
+
 	@media @tablet {
 		padding-left:0;
 	}
 }
 
-/* ===============================
-   LANGUAGE SELECTOR
-   =============================== */
+// LANGUAGE SELECTOR
 
 @language-padding: 0.5em;
 @language-line-height: @font-swatch6-line-height;
@@ -315,23 +312,29 @@ header nav {
 		box-sizing: content-box;
 		margin-left: 22%;
 		width: auto;
+
 		@media only screen and (min-width: 1290px) {
 			margin-left: 250px;
 		}
+
 		@media @tablet {
 			margin-left: 0;
 		}
 	}
+
 	&.language-selector--light {
 		background-color: lighten(@color-swatch3, 10%);
 	}
+
 	&.language-selector--dark {
 		background-color: @color-swatch3;
 	}
+
 	&.language-selector--dropdown {
 		height: auto;
 		text-align: left;
 	}
+
 	.language-selector__inner,
 	.language-selector__list,
 	.language-selector__item,
@@ -364,6 +367,7 @@ header nav {
 			padding: @language-padding @language-padding 0;
 		}
 	}
+
 	.language-selector.language-selector--dropdown & {
 		padding: @language-padding;
 		
@@ -396,6 +400,7 @@ header nav {
 		margin: @language-padding 0;
 		min-width: auto;
 		max-width: 100%;
+
 		@media @tablet {
 			margin: 0;
 			padding: @language-padding;
@@ -549,9 +554,11 @@ header nav {
 		box-sizing: content-box;
 		line-height: @language-line-height;
 	}
+
 	.language-selector.language-selector--flag-text & {
 		margin: 0;
 	}
+
 	.language-selector.language-selector--dropdown.language-selector--flag-text & {
 		float: left;
 		box-sizing: border-box;
@@ -583,6 +590,7 @@ header nav {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+
 		.language-selector--flag-text& {
 			@media only screen and (max-width: 380px) {
 				display: none;
@@ -591,9 +599,7 @@ header nav {
 	}
 }
 
-/* ===============================
-   EXTENDED NAVIGATION
-   =============================== */
+// EXTENDED NAVIGATION
 
 .widget {
 	&.extendednavigation {
@@ -628,6 +634,7 @@ header nav {
 		ul {
 			margin: 0 auto;
 			padding: 0;
+
 			@media @tablet {
 				display: none;
 				width: 90%;
@@ -644,8 +651,9 @@ header nav {
 					width: 100%;
 					padding:0;
 					border: none;
+
 					&:last-child {
-					  border-bottom: none;
+					  	border-bottom: none;
 					}
 				}
 
@@ -657,9 +665,11 @@ header nav {
 						padding: 0;
 						margin: 0;
 						position: relative;
+
 						@media @tablet {
 						  background-color: darken(@color-swatch7,3%);
 						}
+
 						li {
 							display: block;
 							width: 100%;
@@ -683,13 +693,15 @@ header nav {
 					color: @font-swatch6-color;
 					line-height: @font-swatch6-line-height;
 					letter-spacing: @font-swatch6-letter-spacing;
+
 					&:hover {
 						color: @font-swatch6-color;
 						background-color: @font-swatch6-background-color-hover;
 						text-decoration: none;
 					}
+
 					@media @tablet {
-					  padding: 10px 8px;
+					  	padding: 10px 8px;
 					}
 				}
 
@@ -769,6 +781,7 @@ header nav {
 		a {
 			&.pull {
 				display: none;
+
 				@media @tablet {
 					display: block;
 					margin: 0;
@@ -829,9 +842,7 @@ header nav {
 	left: inherit !important;
 }
 
-/* ===============================
-   FEATURE
-   =============================== */
+// FEATURE
 
 .widget.feature {
 	z-index: 100;
@@ -984,9 +995,7 @@ header nav {
 	}
 }
 
-/* ===============================
-   CONTENT
-   =============================== */
+// CONTENT
 
 .widget.content {
 	padding: 0;
@@ -1072,9 +1081,7 @@ blockquote {
 	}
 }
 
-/* ===============================
-   IMAGE WIDGET
-   =============================== */
+//  IMAGE WIDGET
 
 .widget.image img {
 	display:block;
@@ -1095,24 +1102,24 @@ blockquote {
 }
 
 .widget.image a:hover {
-  text-decoration: none;
-  cursor: pointer;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .widget.image span.image-title:hover {
-  color: lighten(@font-swatch4-color,30%);
+	color: lighten(@font-swatch4-color,30%);
 
-  .style--light & {
-	  color: lighten(@contrast--light, 15%);
-  }
+	.style--light & {
+		color: lighten(@contrast--light, 15%);
+	}
 
-  .style--accent & {
-      color: lighten(@contrast--accent, 15%);
-  }
+	.style--accent & {
+		color: lighten(@contrast--accent, 15%);
+	}
 
-  .style--dark & {
-      color: lighten(@contrast--dark, 15%);
-  }
+	.style--dark & {
+		color: lighten(@contrast--dark, 15%);
+	}
 }
 
 .widget.image span.image-description {
@@ -1125,9 +1132,7 @@ blockquote {
 	color: @font-swatch5-color;
 }
 
-/* ===============================
-   LINE WIDGET
-   =============================== */
+//  LINE WIDGET
 
 hr.line {
    background-color: darken(@color-swatch6,10%);
@@ -1135,22 +1140,20 @@ hr.line {
    width: 100%;
    border: none;
 
-   	.style--light & {
-      background-color: darken(@color--light, 12%);
-    }
+	.style--light & {
+		background-color: darken(@color--light, 12%);
+	}
 
-    .style--accent & {
-      background-color: darken(@color--accent, 12%);
-    }
+	.style--accent & {
+		background-color: darken(@color--accent, 12%);
+	}
 
-    .style--dark & {
-      background-color: lighten(@color--dark, 15%);
-    }
+	.style--dark & {
+		background-color: lighten(@color--dark, 15%);
+	}
 }
 
-/* ===============================
-   GALLERY WIDGET
-   =============================== */
+//  GALLERY WIDGET
 
 .widget.gallery {
 	margin: 20px 0 20px -0.5%;
@@ -1209,20 +1212,18 @@ hr.line {
 /* Lightbox */
 
 .lb-data .lb-caption, .lb-data .lb-number {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:lighten(@font-swatch5-color,50%);
+	font-family:@font-swatch5-font-family;
+	font-size:@font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height:@font-swatch5-line-height;
+	color:lighten(@font-swatch5-color,50%);
 }
 
 .lb-data .lb-number {
-  font-size:bkscale(@font-swatch5-font-size,0.9);
+  	font-size:bkscale(@font-swatch5-font-size,0.9);
 }
 
-/* =======================================
-   CLICK TO CALL
-   ==================================== */
+// CLICK TO CALL
 
 .widget.clicktocall {
 	padding: 8px 0
@@ -1255,9 +1256,7 @@ hr.line {
 	cursor: pointer;
 }
 
-/* ===============================
-   TWITTER FULL
-   =============================== */
+// TWITTER FULL
 
 .widget.twitter a {
    font-family: @font-swatch5-font-family;
@@ -1265,32 +1264,32 @@ hr.line {
    font-size: @font-swatch5-font-size;
 
  	.style--light & {
-    color: @color--accent;
-  }
+		color: @color--accent;
+	}
 
-  .style--accent & {
-    color: @contrast--accent;
-  }
+	.style--accent & {
+		color: @contrast--accent;
+	}
 
-  .style--dark & {
-    color: @contrast--dark;
-  }
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 .widget.twitter .twitter-content p {
-  color: @font-swatch5-color;
+  	color: @font-swatch5-color;
 
-  .style--light & {
-    color: fade(@contrast--light, 90%);
-  }
+	.style--light & {
+		color: fade(@contrast--light, 90%);
+	}
 
-  .style--accent & {
-    color: fade(@contrast--accent, 90%);
-  }
+	.style--accent & {
+		color: fade(@contrast--accent, 90%);
+	}
 
-  .style--dark & {
-    color: fade(@contrast--dark, 90%);
-  }
+	.style--dark & {
+		color: fade(@contrast--dark, 90%);
+	}
 }
 
 .widget.twitter a:hover {
@@ -1316,22 +1315,22 @@ hr.line {
 	background-color: @color-swatch1;
 
 	.style--light & {
-      background-color: darken(@color--light, 5%);
-      border-color: darken(@color--light, 10%);
-      color: fade(@contrast--light, 90%);
-  }
+		background-color: darken(@color--light, 5%);
+		border-color: darken(@color--light, 10%);
+		color: fade(@contrast--light, 90%);
+	}
 
-  .style--accent & {
-    background-color: lighten(@color--accent, 5%);
-    border-color: darken(@color--accent, 10%);
-    color: fade(@contrast--accent, 90%);
-  }
+	.style--accent & {
+		background-color: lighten(@color--accent, 5%);
+		border-color: darken(@color--accent, 10%);
+		color: fade(@contrast--accent, 90%);
+	}
 
-  .style--dark & {
-    background-color: lighten(@color--dark, 5%);
-    border-color: darken(@color--dark, 10%);
-    color: fade(@contrast--dark, 90%);
-  }
+	.style--dark & {
+		background-color: lighten(@color--dark, 5%);
+		border-color: darken(@color--dark, 10%);
+		color: fade(@contrast--dark, 90%);
+	}
 }
 
 .widget.twitter .twitter-profile-pic {
@@ -1360,26 +1359,26 @@ ul.twitter {
 }
 
 .widget.twitter .twitter-content span a {
-  padding-right: 20px;
+	padding-right: 20px;
 }
 
 .widget.twitter .twitter-content time, .widget.twitter .twitter-content span.bk-full-name, 
 .widget.twitter .twitter-content span, .widget.twitter .twitter-content span a {
-  font-family: @font-swatch5-font-family;
-  font-size: 12px;
-  color: lighten(@font-swatch5-color, 30%);
+	font-family: @font-swatch5-font-family;
+	font-size: 12px;
+	color: lighten(@font-swatch5-color, 30%);
 
-  .style--light & {
-    color: fade(@contrast--light, 70%);
-  }
+	.style--light & {
+		color: fade(@contrast--light, 70%);
+	}
 
-  .style--accent & {
-    color: fade(@contrast--accent, 70%);
-  }
+	.style--accent & {
+		color: fade(@contrast--accent, 70%);
+	}
 
-  .style--dark & {
-    color: fade(@contrast--dark, 70%);
-  }
+	.style--dark & {
+		color: fade(@contrast--dark, 70%);
+	}
 }
 
 .widget.twitter .twitter-content span.bk-full-name {
@@ -1389,28 +1388,26 @@ ul.twitter {
 
 .widget.twitter .twitter-content span.bk-full-name,
 .widget.twitter .twitter-content span a {
-   color: @color-swatch3;
+	color: @color-swatch3;
 
-  .style--light & {
-    color: @color--accent;
-  }
+	.style--light & {
+		color: @color--accent;
+	}
 
-  .style--accent & {
-    color: @contrast--accent;
-  }
+	.style--accent & {
+		color: @contrast--accent;
+	}
 
-  .style--dark & {
-    color: @contrast--dark;
-  }
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 .widget.twitter .twitter-content span.bk-full-name:hover, .widget.twitter .twitter-content span a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
-/* ===============================
-   TWEET THIS
-   =============================== */
+// TWEET THIS
 
 .widget.tweet a {
 	margin: 0;
@@ -1433,29 +1430,25 @@ ul.twitter {
 	letter-spacing: 1px;
 }
 
-/* ===============================
-   DROPBOX BUTTON
-   =============================== */
+// DROPBOX BUTTON
 
 .widget.dropbox .b-wrap .btn,
 .widget.paypalbuynow .widget.button.paypal {
-  background-repeat: no-repeat;
-  background-position: 19px center;
-  background-size: 20px;
-  text-transform: uppercase;
+	background-repeat: no-repeat;
+	background-position: 19px center;
+	background-size: 20px;
+	text-transform: uppercase;
 }
 
 .widget.dropbox .b-wrap .btn {
-  background-image: image('/images/dropbox-icon.png');
+	background-image: image('/images/dropbox-icon.png');
 }
 
 .widget.paypalbuynow .widget.button.paypal {
 	background-image: image('/images/paypal.png');
 }
 
-/* ==================================
-   SOCIAL BAR WIDGET / SOCIAL PROFILE
-   =============================== */
+// SOCIAL BAR WIDGET / SOCIAL PROFILE
 
 .widget.socialicons,
 .widget.profile .bk-profile-socialicons {
@@ -1489,19 +1482,19 @@ ul.twitter {
 	border: none;
 
 	.style--light & {
-  	background-color: @color--accent;
-  	color: @contrast--accent;
-  }
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
 
-  .style--accent & {
-  	background-color: @color--light;
-  	color: @contrast--light;
-  }
+	.style--accent & {
+		background-color: @color--light;
+		color: @contrast--light;
+	}
 
-  .style--dark & {
-  	background-color: @color--light;
-  	color: @contrast--light;
-  }
+	.style--dark & {
+		background-color: @color--light;
+		color: @contrast--light;
+	}
 }
 
 .widget.profile .bk-profile-socialicons span a {
@@ -1596,14 +1589,12 @@ footer .widget.profile .bk-profile-socialicons span a {
 	background-image: image('/images/social/socialicons-youtube.png')
 }
 
-/* ===============================
-   PROFILE WIDGET
-   =============================== */
+// PROFILE WIDGET
 
 .bk-footer .widget.profile {
-  margin: 0 auto;
-  padding-bottom: 10px;
-  text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	text-align: center;
 }
 
 
@@ -1625,7 +1616,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 /*  LATEST TWEET IN FOOTER */
 
 .widget.profile .twitter {
-  width: 50%;
+  	width: 50%;
 }
 
 .widget.profile .twitter a {
@@ -1669,7 +1660,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 }
 
 .widget.profile .twitter a img {
-  border-radius: 30px;
+  	border-radius: 30px;
 	-webkit-border-radius: 30px;
 	-moz-border-radius:  30px;
 	border-radius: 30px;
@@ -1682,16 +1673,16 @@ footer .widget.profile .bk-profile-socialicons span a {
 }
 
 .widget.profile .twitter .twitter-content a:hover {
-  text-decoration: underline;
-  color: @color-swatch6;
+	text-decoration: underline;
+	color: @color-swatch6;
 }
 
 .widget.profile .twitter time, .widget.profile .twitter span, .widget.profile .twitter span a {
-color: @color-swatch5;
+	color: @color-swatch5;
 }
 
 .bk-footer .widget.profile .twitter span {
-  display: inline;
+	display: inline;
 }
 
 /* FOOTER PROFILE - SINGLE EMAIL FORM */
@@ -1701,6 +1692,7 @@ color: @color-swatch5;
 	border: 1px solid darken(@color-swatch6, 10%);
 	border-radius: 4px;
 	width: 80%;
+
 	&:focus {
 		box-shadow: 0 0 5px fade(@color-swatch3, 20%);
 	}
@@ -1749,9 +1741,7 @@ color: @color-swatch5;
 	width: 19%;
 }
 
-/* ===============================
-   FORMS
-   =============================== */
+//  FORMS
 
 .widget.profile form {
 	margin: 0 0 10px;
@@ -1930,9 +1920,7 @@ button.btn {
 	}
 }
 
-/* ===============================
-   BLOG LIST POSTS
-   =============================== */
+//  BLOG LIST POSTS
 
 .widget.blogpostlist {
 	
@@ -1956,6 +1944,7 @@ button.btn {
 				background-position: center;
 				z-index: 1000;
 				border-radius: 5px;
+
 				img {
 					display: none;
 				}
@@ -1985,31 +1974,31 @@ button.btn {
 					text-decoration: none;
 
 					.style--light & {
-		        color: @color--accent;
-			    }
+						color: @color--accent;
+					}
 
-			    .style--accent & {
-		        color: @contrast--accent;
-			    }
+					.style--accent & {
+						color: @contrast--accent;
+					}
 
-			    .style--dark & {
-		        color: @contrast--dark;
-			    }
+					.style--dark & {
+						color: @contrast--dark;
+					}
 
 					&:hover {
 						border-bottom: 1px solid @color-swatch3;
 
 						.style--light & {
-			        border-color: @color--accent;
-				    }
+							border-color: @color--accent;
+						}
 
-				    .style--accent & {
-			        border-color: @contrast--accent;
-				    }
+						.style--accent & {
+							border-color: @contrast--accent;
+						}
 
-				    .style--dark & {
-			        border-color: @contrast--dark;
-				    }
+						.style--dark & {
+							border-color: @contrast--dark;
+						}
 					}
 				}
 			}
@@ -2027,6 +2016,7 @@ button.btn {
 			}
 		}
 	}
+
 	.blog-list-footer {
 		padding: 0;
 	}
@@ -2048,22 +2038,22 @@ button.btn {
 	border-radius: 4px;
 
 	.style--light & {
-  	background-color: @color--accent;
-  	color: @contrast--accent;
-  	text-shadow: 0 1px 1px darken(@color--accent, 10%);
-  }
+		background-color: @color--accent;
+		color: @contrast--accent;
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
 
-  .style--accent & {
-  	background-color: @color--light;
-  	color: @contrast--light;
-    text-shadow: 0 1px 1px darken(@color--light, 10%)
-  }
+	.style--accent & {
+		background-color: @color--light;
+		color: @contrast--light;
+		text-shadow: 0 1px 1px darken(@color--light, 10%)
+	}
 
-  .style--dark & {
-  	background-color: @color--light;
-  	color: @contrast--light;
-    text-shadow: 0 1px 1px darken(@color--light, 10%);
-  }
+	.style--dark & {
+		background-color: @color--light;
+		color: @contrast--light;
+		text-shadow: 0 1px 1px darken(@color--light, 10%);
+	}
 
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
@@ -2083,14 +2073,13 @@ button.btn {
 	}
 }
 
-/* ===============================
-   BLOG SEARCH
-   =============================== */
+//  BLOG SEARCH
 
 .blogsearch {
 	label {
 		display: block;
 	}
+
 	input {
 		height: 40px;
 		width: 70%;
@@ -2132,20 +2121,19 @@ button.btn {
 	}
 }
 
-.blog-post-feature-image-wrap {  /* Blog post feature image */
+.blog-post-feature-image-wrap {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 250px;
 	width: 100%;
+
 	img {
 		display: none;
 	}
 }
 
-/* ===============================
-   BLOG TIME
-   =============================== */
+//  BLOG TIME
 
 time.blog-post-published-date, footer.blog-post-metadata time {
 	padding: 1em 0;
@@ -2162,36 +2150,29 @@ footer.blog-post-metadata time {
 }
 
 
-/* ===============================
-   LINKED IN
-   =============================== */
+//  LINKED IN
 
 .container-outer .li-profile-container {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .no-profile {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-
+	font-family:@font-swatch5-font-family;
+	font-size:@font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height:@font-swatch5-line-height;
+	color:@font-swatch5-color;
+	letter-spacing: @font-swatch5-letter-spacing;
 }
 
-/* ===============================
-   MAP WIDGET
-   =============================== */
+//  MAP WIDGET
 
 .widget.map {
-  border: 1px solid #dddddd;
+  	border: 1px solid #dddddd;
 }
 
-/* ===============================
-   SIGNUPFORM WIDGET
-   =============================== */
+//  SIGNUPFORM WIDGET
 
 .widget.signupform {
 	display: block;
@@ -2215,16 +2196,16 @@ footer.blog-post-metadata time {
 	letter-spacing: @font-swatch5-letter-spacing;
 
 	.style--light & {
-    color: @contrast--light;
-  }
+		color: @contrast--light;
+	}
 
-  .style--accent & {
-    color: @contrast--accent;
-  }
+	.style--accent & {
+		color: @contrast--accent;
+	}
 
-  .style--dark & {
-    color: @contrast--dark;
-  }
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 .widget.signupform fieldset input {
@@ -2275,9 +2256,7 @@ footer.blog-post-metadata time {
 	}
 }
 
-/* ===============================
-   EMBEDDED CONTENT
-   =============================== */
+//  EMBEDDED CONTENT
 
 .widget .embed,
 .widget .youtube,
@@ -2286,17 +2265,15 @@ footer.blog-post-metadata time {
 }
 
 .widget .embed .embed-content {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .widget .embed .embed-content iframe {
-  width: 100%;
+  	width: 100%;
 	height: auto;
 }
 
-/* ===============================
-   SLIDESHOW WIDGET
-   =============================== */
+//  SLIDESHOW WIDGET
 
 .widget.responsiveslideshow {
 	.slideshow-image-list,
@@ -2313,7 +2290,7 @@ footer.blog-post-metadata time {
 		}
 
 		.description {
-		  padding: 5px 20px 15px 20px;
+		  	padding: 5px 20px 15px 20px;
 		}
 		
 		.btn-play {
@@ -2425,24 +2402,21 @@ footer.blog-post-metadata time {
 }
 
 
-/* ===============================
-   IPAD WIDTH
-   =============================== */
+//  IPAD WIDTH
 
 @media only screen and (max-width: 768px) { 
 
 /* DEFAULT PAGE TYPE */
 
 .bk-footer {
-  min-height: auto;
-  padding: 3% 5%;
-
+	min-height: auto;
+	padding: 3% 5%;
 }
 
 /* latest tweet */
 
 .widget.profile .twitter {
-  width: 50%;
+  	width: 50%;
 }
 
 /* COMPANY NAME */
@@ -2452,8 +2426,8 @@ footer.blog-post-metadata time {
 }
 
 .widget.companyname a {
-  font-size: bkscale(@font-swatch10-font-size,0.9);
-  line-height:  bkscale(@font-swatch10-line-height,0.9);
+	font-size: bkscale(@font-swatch10-font-size,0.9);
+	line-height:  bkscale(@font-swatch10-line-height,0.9);
 }
 
 /* SLIDESHOW */
@@ -2465,9 +2439,7 @@ footer.blog-post-metadata time {
 
 }/* end IPAD width */
 
-/* ===============================
-   IPHONE WIDTH
-   =============================== */
+//  IPHONE WIDTH
 
 @media only screen and (max-width: 480px) {
 	.bk-footer {
@@ -2510,7 +2482,6 @@ footer.blog-post-metadata time {
 		font-size: bkscale(@font-swatch10-font-size,0.7);
 		line-height:  bkscale(@font-swatch10-line-height,0.7);
 	}
-
 
 	/* CLICK TO CALL */
 
@@ -2616,9 +2587,7 @@ footer.blog-post-metadata time {
 	*zoom: 1
 }
 
-/* ===============================
-   MENU SECTIONS NAVIGATION
-   =============================== */
+//  MENU SECTIONS NAVIGATION
 
 .widget {
 	&.menusections {
@@ -2649,6 +2618,7 @@ footer.blog-post-metadata time {
 
 				&:last-child {
 					padding-right: 0;
+					
 					@media only screen and (max-width: 550px) {
 						border-bottom: 1px solid darken(@color-swatch1,7%);
 					}
@@ -2671,107 +2641,117 @@ footer.blog-post-metadata time {
 	}
 }
 
-/* ===============================
-   MENU
-   =============================== */
+//  MENU
 
 .widget {
-  &.menu {
-	margin: 20px 0;
-	h4, .menu-item-nutritional-prop {
-	  font-size: @font-swatch5-font-size;
-	}
-	.menu-header, .menu-subsection-header { 
-	  text-align: center;
-	   padding: 2em 0;
-	}
-	.menu-items {
-	  li {
-		display: block;
-		padding: 20px 0;
-		.inner-item {
-		  display: block;
-		  padding: 0;
-		  margin: 0;
+	&.menu {
+		margin: 20px 0;
+
+		h4,
+		.menu-item-nutritional-prop {
+			font-size: @font-swatch5-font-size;
 		}
-		&.menu-item-promoted {
-		  padding: 30px;
-		  border: 2px solid fade(@color-swatch3, 20%);
-		  background-color: @color-swatch1;
+
+		.menu-header,
+		.menu-subsection-header { 
+			text-align: center;
+			padding: 2em 0;
 		}
-	  }
-	  .menu-item-image-wrap {
-		  height: 200px;
-		  background-size: cover;
-		  background-position: center;
-		  -webkit-background-size: cover;
-		  -moz-background-size: cover;
-		  -o-background-size: cover;
-		  clear:both;
-		  background-repeat: no-repeat;
-		  background-position: center;
-		img {
-		  display: none;
+
+		.menu-items {
+			li {
+			display: block;
+			padding: 20px 0;
+
+				.inner-item {
+					display: block;
+					padding: 0;
+					margin: 0;
+				}
+
+				&.menu-item-promoted {
+					padding: 30px;
+					border: 2px solid fade(@color-swatch3, 20%);
+					background-color: @color-swatch1;
+				}
+			}
+
+			.menu-item-image-wrap {
+				height: 200px;
+				background-size: cover;
+				background-position: center;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				clear:both;
+				background-repeat: no-repeat;
+				background-position: center;
+
+				img {
+					display: none;
+				}
+			}
 		}
-	  }
+
+		.menu-item-price {
+			padding: 10px 0;
+
+			p {
+				color: @color-swatch3;
+				font-weight: @font-swatch7-font-weight;
+				padding: 0;
+			}
+		}
+
+		.menu-section-item-dietary-props {
+			.dietary-icon {
+				background-color: @color-swatch3;
+				font-size: bkscale(@font-swatch5-font-size,0.8);
+				color: @color-swatch1;
+				padding: 0px 10px;
+				text-transform: uppercase;
+				letter-spacing: 0.3px;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+			}
+		}
+
+		// Menu Subsection
+
+		.menu-subsection {
+			padding: 0;
+			margin: 0;
+		}
+
+		.wrapper {
+			width: 100%;
+			margin: 0;
+		}
 	}
-
-	.menu-item-price {
-	  padding: 10px 0;
-
-	  p {
-		color: @color-swatch3;
-		font-weight: @font-swatch7-font-weight;
-		padding: 0;
-	  }
-	}
-
-	.menu-section-item-dietary-props {
-	  .dietary-icon {
-		background-color: @color-swatch3;
-		font-size: bkscale(@font-swatch5-font-size,0.8);
-		color: @color-swatch1;
-		padding: 0px 10px;
-		text-transform: uppercase;
-		letter-spacing: 0.3px;
-		-webkit-border-radius: 2px;
-		-moz-border-radius: 2px;
-		border-radius: 2px;
-	  }
-	}
-
-	// Menu Subsection
-
-	.menu-subsection {
-	  padding: 0;
-	  margin: 0;
-	}
-
-	.wrapper {
-	  width: 100%;
-	  margin: 0;
-	}
-  }
 }
 
 .menu-subsection-header .menu-subsection-name {
-  color: @color-swatch7;
+	color: @color-swatch7;
 }
 
-.menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
+.menu-subsection .menu-subsection-promoted {
 	padding: 0.5em 2.5em;
 	margin-bottom: 2em;
 	position: relative;
 	border: 2px solid fade(@color-swatch3,20%);
 	background-color: @color-swatch1;
+
 	@media @mobile {
 		padding: 0 2em 0;
 		margin-bottom: 2em;
 	}
+
 	.menu-subsection-header {
-		h2 { /* menu-section-name */
+		h2 {
 			color: @color-swatch3;
 			background-image: none;
+
 			&:before, &:after {
 				content: "\2605";
 				display: inline-block;
@@ -2783,23 +2763,19 @@ footer.blog-post-metadata time {
 			}
 		}
 	}
-} /* end PROMOTED SUB-SECTION */
-
+}
 
 .widget {
-  .youtube, .map {
-	margin: 1.5em 0;
-  }
+	.youtube, .map {
+		margin: 1.5em 0;
+	}
 }
 
 .widget.map {
-  border: none;
+  	border: none;
 }
 
-
-/* ======================================
-   ECOM - PRODUCTLIST & FEATURED PRODUCTS
-   ====================================== */
+// ECOM - PRODUCTLIST & FEATURED PRODUCTS
 
 .widget.ecomproductslist {
 	margin: 0;
@@ -2869,6 +2845,7 @@ footer.blog-post-metadata time {
 		font-size: bkscale(@font-swatch5-font-size, 0.8);
 		margin: 1em 0;
 	}
+
 	.ecom-productslist-product {
 		width: 32.36%;
 		margin-left: 1%;
@@ -2889,6 +2866,7 @@ footer.blog-post-metadata time {
 .widget.ecomproductslist .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
 	background-color: transparent;
+
 	@media @mobile {
 		height: 150px !important;
 	}
@@ -2897,6 +2875,7 @@ footer.blog-post-metadata time {
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
 	width: 32.36%;
 	margin-left: 1%;
+
 	@media @tablet {
 		width: 47%;
 		margin: 1%;
@@ -2952,6 +2931,7 @@ footer.blog-post-metadata time {
 
 	a:hover {
 		text-decoration: none;
+
 		.ecom-productlist-info, .ecom-featuredproducts-info {
 			.ecom-productslist-title, .ecom-featuredproducts-title, .ecom-productlist-price, .ecom-featuredproducts-price {
 				color: @color-swatch7;
@@ -2996,20 +2976,21 @@ footer.blog-post-metadata time {
 		border: 1px solid @color-swatch3;
 
 		.style--light & {
-		border-color: @color--accent;
-		color: @color--accent;
+			border-color: @color--accent;
+			color: @color--accent;
 		}
 
 		.style--accent & {
-		border-color: @color--accent;
-		color: @contrast--accent;
+			border-color: @color--accent;
+			color: @contrast--accent;
 		}
 
 		.style--dark & {
-		border-color: @color--dark;
-		color: @contrast--dark;
+			border-color: @color--dark;
+			color: @contrast--dark;
 		}
 	}
+
 	.productlist-pagination-page {
 		font-family: @font-swatch7-font-family;
 		color: @font-swatch7-color;
@@ -3021,34 +3002,34 @@ footer.blog-post-metadata time {
 		text-decoration: none;
 
 		.style--light & {
-      border-color: darken(@color--light, 12%);
-      color: fade(@color--accent, 80%);
-    }
+			border-color: darken(@color--light, 12%);
+			color: fade(@color--accent, 80%);
+		}
 
-    .style--accent & {
-      border-color: lighten(@color--accent, 12%);
-      color: fade(@contrast--accent, 90%);
-    }
+		.style--accent & {
+			border-color: lighten(@color--accent, 12%);
+			color: fade(@contrast--accent, 90%);
+		}
 
-    .style--dark & {
-      border-color: lighten(@color--dark, 12%);
-      color: fade(@contrast--dark, 90%);
-    }
+		.style--dark & {
+			border-color: lighten(@color--dark, 12%);
+			color: fade(@contrast--dark, 90%);
+		}
 
 		&:hover {
 			border: 1px solid darken(@color-swatch6, 30%);
 
 			.style--light & {
-	      border-color: darken(@color--light, 20%);
-	    }
+				border-color: darken(@color--light, 20%);
+			}
 
-	    .style--accent & {
-	      border-color: lighten(@color--accent, 20%);
-	    }
+			.style--accent & {
+				border-color: lighten(@color--accent, 20%);
+			}
 
-	    .style--dark & {
-	      border-color: lighten(@color--dark, 20%);
-	    }
+			.style--dark & {
+				border-color: lighten(@color--dark, 20%);
+			}
 		}
 	}
 }
@@ -3058,6 +3039,7 @@ footer.blog-post-metadata time {
 	padding: 8px 14px;
 	line-height: 18px;
 	border-radius: 4px;
+
 	&:hover {
 		cursor: pointer;
 		text-decoration: none;
@@ -3076,17 +3058,17 @@ footer.blog-post-metadata time {
 	border-bottom: 1px solid darken(@color-swatch6, 10%);
 	margin-left: 0;
 
-		.style--light & {
-      border-color: darken(@color--light, 12%);
-    }
+	.style--light & {
+		border-color: darken(@color--light, 12%);
+	}
 
-    .style--accent & {
-      border-color: lighten(@color--accent, 12%);
-    }
+	.style--accent & {
+		border-color: lighten(@color--accent, 12%);
+	}
 
-    .style--dark & {
-      border-color: lighten(@color--dark, 12%);
-    }
+	.style--dark & {
+		border-color: lighten(@color--dark, 12%);
+	}
 }
 
 .ecom-featuredproducts-header h2 {
@@ -3095,43 +3077,48 @@ footer.blog-post-metadata time {
 }
 
 
-/* ===============================
-  ECOM - BASKET
-   =============================== */
+// ECOM - BASKET
 
 .widget.ecombasket {
 	margin: 1em 0 2em;
+
 	.ecombasket-pull {
 		padding: 16px 20px;
 		margin: 0;
 		border: none;
 		border-radius: 4px;
 		background-color: @font-swatch7-background-color;
+
 		p {
-		  font-family: @font-swatch7-font-family;
-		  font-size: @font-swatch7-font-size;
-		  font-weight:@font-swatch7-font-weight;
-		  color: @font-swatch7-color;
-		  text-decoration: none;
-		  letter-spacing: 1px;
+			font-family: @font-swatch7-font-family;
+			font-size: @font-swatch7-font-size;
+			font-weight:@font-swatch7-font-weight;
+			color: @font-swatch7-color;
+			text-decoration: none;
+			letter-spacing: 1px;
 		}
+
 		&:hover {
-		  background-color: @font-swatch7-background-color-hover;
-		  cursor: pointer;
+			background-color: @font-swatch7-background-color-hover;
+			cursor: pointer;
 		}
 	}
+
 	.ecombasket-list-container {
 		margin: 1em 0 2em;
 		border: 1px solid fade(@color-swatch3,20%);
 		border-radius: 4px;
 		padding: 1.2em 2em 2em;
+
 		ul {
 			li {
 				border-bottom: 1px dotted fade(@color-swatch3,25%);
+
 				.ecombasket-item-image {
 					width: 96px;
 					height: 96px;
 				}
+
 				.ecombasket-item-info {
 					.ecombasket-item-title, .ecombasket-remove-button {
 						color: @color-swatch3;
@@ -3144,6 +3131,7 @@ footer.blog-post-metadata time {
 						margin: 0;
 						display: block;
 						text-align: left;
+
 						&:hover {
 							text-decoration: underline;
 						}
@@ -3155,123 +3143,138 @@ footer.blog-post-metadata time {
 }
 
 a.btn.ecombasket-summary-link {
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin: 1em 0;
-  border-radius: 4px;
-  &:hover {
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 30px;
+	margin: 1em 0;
+	border-radius: 4px;
+
+	&:hover {
 		background-color: @font-swatch7-background-color-hover;
-  }
+	}
 }
 
-/* ===============================
-  ECOM - PRODUCT
-   =============================== */
+// ECOM - PRODUCT
 
 .widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
-  background-image: none !important;
+	background-image: none !important;
 }
 
 .ecom-product-long-description {
-  margin: 2em 0;
-  display: inline-block;
-  @media @mobile {
-	 margin-top: 20px;
-  }
+	margin: 2em 0;
+	display: inline-block;
+
+	@media @mobile {
+		margin-top: 20px;
+	}
 }
 
 .widget.ecomproduct .ecom-product .btn, .ecom-product-go-to-checkout-btn {
-  padding: 14px 40px;
-  border-radius: 4px;
-  &:hover {
-	text-decoration: none;
-	background-color: @font-swatch7-background-color-hover;
-  }
+	padding: 14px 40px;
+	border-radius: 4px;
+
+	&:hover {
+		text-decoration: none;
+		background-color: @font-swatch7-background-color-hover;
+	}
 }
 
 .ecom-product-go-to-checkout-btn {
-  float: left;
+	float: left;
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-cattag {
-  margin: 20px 0 0;
-  float: left;
-  width: 100%;
+	margin: 20px 0 0;
+	float: left;
+	width: 100%;
 }
 
 
-/* ===============================
-  ECOM - BASKET SUMMARY
-   =============================== */
+// ECOM - BASKET SUMMARY
 
 .widget.ecombasketsummary {
 	h2 {
 		padding: 0.7em 0;
+
 		@media @mobile {
 			padding: 0.5em 0;
 		}
 	}
+
 	.basket-summary-empty-copy {
 		padding: 0 0 2.5em;
 	}
+
 	a.basket-summary-empty-cta.btn, .btn.basket-summary-submit {
-		  padding: 16px 40px;
-		  margin-bottom: 10px;
-		  font-family: @font-swatch7-font-family;
-		  font-size: @font-swatch7-font-size;
-		  font-weight:@font-swatch7-font-weight;
-		  background-color: @font-swatch7-background-color;
-		  border: 1px solid @color-swatch6;
-		  color: @font-swatch7-color;
-		  text-decoration: none;
-		  letter-spacing: 1px;
-		  display: inline-block;
-		  &:hover {
-				background-color: @font-swatch7-background-color-hover;
-				cursor: pointer;
-		  }
+		padding: 16px 40px;
+		margin-bottom: 10px;
+		font-family: @font-swatch7-font-family;
+		font-size: @font-swatch7-font-size;
+		font-weight:@font-swatch7-font-weight;
+		background-color: @font-swatch7-background-color;
+		border: 1px solid @color-swatch6;
+		color: @font-swatch7-color;
+		text-decoration: none;
+		letter-spacing: 1px;
+		display: inline-block;
+
+		&:hover {
+			background-color: @font-swatch7-background-color-hover;
+			cursor: pointer;
+		}
 	}
+
 	.basket-summary-items-table {
 		border-spacing: 0;
 		width: 100%;
 		margin-bottom: 20px;
+
 		tr {
 			width: 100%;
+
 			th, td {
 				border-bottom: 1px solid fade(@color-swatch5,10%);
 				padding: 1.5em 0;
 				text-align: left;
+
 				&:nth-child(1) {
 					width: 10%;
 					padding-left: 5px;
+
 					@media @tablet {
 						width: 15%;
 					}
 				}
+
 				&:nth-child(2) {
 					width: 58%;
 				}
+
 				&:nth-child(3) {
 					text-align: right;
 					padding: 1.5em 0.5em;
 				}
 			}
+
 			th {
 				padding: 1.5em 0.5em;
 				vertical-align: bottom;
 			}
+
 			@media @mobile {
 				display: table;
+
 				td {
 					&:nth-child(1), &:nth-child(2), &:nth-child(3) {
 						width: 33%;
 					}
 				}
 			}
+
 			&.basket-summary-items {
 				td {
 					vertical-align: middle;
+
 					.image-wrap {
 						width: 95px;
 						height: 95px;
@@ -3284,19 +3287,24 @@ a.btn.ecombasket-summary-link {
 						overflow: hidden;
 						float: left;
 						margin-right: 20px;
+
 						img {
 							display: none;
 						}
 					}
+
 					.basket-summary-productname, .basket-summary-pricepu {
 						display: block;
 					}
+
 					.basket-summary-quantity {
 						background-color: transparent;
+
 						label {
 							display: block;
 							margin-bottom: 5px;
 						}
+
 						button {
 							background-color: @color-swatch1;
 							margin: 0;
@@ -3308,14 +3316,17 @@ a.btn.ecombasket-summary-link {
 							color: @color-swatch3;
 							border: 1px solid darken(@color-swatch6,20%);
 							border-radius: 4px;
+
 							&:hover {
 								border: 1px solid darken(@color-swatch6,30%);
 							}
+
 							@media @tablet {
 								width: 35px;
 								height: 35px;
 							}
 						}
+
 						span {
 							width: auto;
 							padding: 0 10px;
@@ -3323,6 +3334,7 @@ a.btn.ecombasket-summary-link {
 					}
 				}
 			}
+
 			&:last-child {
 				td {
 					padding: 15px 0;
@@ -3337,6 +3349,7 @@ a.btn.ecombasket-summary-link {
 			}
 		}
 	}
+
 	.basket-summary-legal-links {
 		list-style: none;
 		padding: 1em 0;
