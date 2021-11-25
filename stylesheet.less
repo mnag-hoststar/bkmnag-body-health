@@ -1687,6 +1687,62 @@ footer .widget.profile .bk-profile-socialicons span a {
 	font-size: bkscale(@font-swatch5-font-size,1.1);
 	font-family: @font-swatch5-font-family;
 	color: @color-swatch3;
+	line-height: @font-swatch5-line-height;
+	font-weight: @font-swatch5-font-weight;
+}
+
+.bk-footer .widget.profile a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid fade(@color-swatch3, 50%);
+}
+
+// FOOTER PROFILE
+
+.widget.profile .twitter {
+  	width: 50%;
+}
+
+.widget.profile .twitter a {
+   display: inline;
+   color: @color-swatch4;
+   font-size:@font-swatch5-font-size;
+   text-decoration: none;
+}
+
+.widget.profile .twitter a:hover {
+	color: @color-swatch6;
+	text-decoration: underline;
+}
+
+.widget.profile .twitter {
+	padding: 0;
+	margin: 0;
+}
+
+.widget.profile .twitter li {
+	border-bottom: none;
+	list-style: none;
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	color: @font-swatch5-color;
+	padding: 0;
+	border-bottom: none;
+}
+
+.widget.profile .twitter .twitter-profile-pic {
+	display: none;
+	margin: 5px 20px 0;
+	background-image: image('/images/twitter-img.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+	text-indent: -20000px;
+	width: 45px;
+	height: 37px;
+	float: left;
+	margin-right: 15px;
+}
+
+.widget.profile .twitter a img {
   	border-radius: 30px;
 	-webkit-border-radius: 30px;
 	-moz-border-radius:  30px;
@@ -1710,62 +1766,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 .bk-footer .widget.profile .twitter span {
 	display: inline;
-}
-
-/* FOOTER PROFILE - SINGLE EMAIL FORM */
-
-.widget.profile form fieldset input {
-	background-color: @color-swatch1;
-	border: 1px solid darken(@color-swatch6, 10%);
-	border-radius: 4px;
-	width: 80%;
-
-	&:focus {
-		box-shadow: 0 0 5px fade(@color-swatch3, 20%);
-	}
-}
-
-.widget.profile fieldset {
-	border: none;
-	margin: 0 auto;
-	padding: 0;
-	width: 50%;
-}
-
-.widget.profile fieldset label {
-	width: 100%;
-	float: left;
-	font-family:@font-swatch5-font-family;
-	font-size:@font-swatch5-font-size;
-	font-weight:@font-swatch5-font-weight;
-	line-height:@font-swatch5-line-height;
-	color: @font-swatch5-color;
-	letter-spacing: @font-swatch5-letter-spacing;
-}
-
-.widget.profile fieldset input {
-	height: 40px;
-	width: 100%;
-	border: 1px solid @color-swatch3;
-	background-color: @color-swatch1;
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	color: @color-swatch5;
-	text-indent: 8px;
-	margin-top: 6px;
-	margin-bottom: 20px;
-	padding: 0;
-}
-
-.widget.profile fieldset input:focus {
-	outline: none;
-	box-shadow: 0 0 5px @color-swatch7;
-}
-
-.widget.profile fieldset button.btn {
-	margin: 0;
-	padding: 8px;
-	width: 19%;
 }
 
 //  FORMS
