@@ -47,6 +47,28 @@ label,
 	}
 }
 
+// Normal Text
+
+.widget {
+	p, span, small, pre, code,
+	table, th, td,
+	&.content {
+		color: @font-swatch5-color;
+	
+		.style--light & {
+			color: @contrast--light;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
+		}
+	}
+}
+
 p, ul, ol, li,
 .contentgroup__body,
 .widget.clicktocall a,
@@ -99,18 +121,48 @@ a {
 	}
 }
 
-// CUSTOM CSS
+// Preformatted and Code Text
 
-.nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	overflow: hidden auto;
-	background: @color-swatch7;
-	width: 22%;
-	height: 100%;
-	padding: 2em;
+pre, code {
+	display: block;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border: none;
+	.border-radius(0);
+	background-color: darken(@color-swatch1, 10%);
+	overflow: auto;
+	.paragraph;
+	font-family: monospace;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--accent, 10%);
+	}
+
+	.style--dark & {
+		background-color: lighten(@color--dark, 10%);
+	}
+}
+
+code {
+	border-left: 1px solid @color-swatch5;
+
+	.style--light & {
+		border-color: @color--accent;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @color--accent;
+	}
+}
+
 	text-align: left;
 	-webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
 	-moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
@@ -139,6 +191,8 @@ a {
 		padding-left:0;
 	}
 }
+
+// MAIN
 
 .main {
 	clear: both;
