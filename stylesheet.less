@@ -3067,14 +3067,18 @@ footer.blog-post-metadata time {
 
 // Productlist
 
-.widget.ecomproductslist {
+.widget.ecomproductslist,
+.widget.ecomfeaturedproducts {
 	margin: 0;
 	width: auto;
+}
 
-	.ecom-productslist-products {
-		margin: 0;
-    	max-width: auto;
-	}
+.widget.ecomproductslist .ecom-productslist-products,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap {
+	margin: 0;
+	max-width: auto;
+
+	// Filter
 	
 	.productlist-filter {
 		margin: 0;
@@ -3165,34 +3169,37 @@ footer.blog-post-metadata time {
 			}
 		}
 	}
-	
-	.productlist-item-count {
-		text-align: center;
-		font-size: bkscale(@font-swatch5-font-size, 0.8);
-		margin: 1em 0;
+}
+
+.widget.ecomproductslist .productlist-item-count {
+	text-align: center;
+	font-size: bkscale(@font-swatch5-font-size, 0.8);
+	margin: 1em 0;
+}
+
+// Product Item
+
+.widget.ecomproductslist .ecom-productslist-product,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-product {
+	width: 32.36%;
+	margin-left: 1%;
+
+	@media @tablet {
+		width: 47%;
+		margin: 1%;
+		display: inline-block;
 	}
 
-	.ecom-productslist-product {
-		width: 32.36%;
-		margin-left: 1%;
-
-		@media @tablet {
-			width: 47%;
-			margin: 1%;
-			display: inline-block;
-		}
-
-		@media @mobile {
-			width: auto;
-			margin: 0;
-			display: block;
-		}
-			
-		.responsivecolumns & {
-			width: auto;
-			margin: 0;
-			display: block;
-		}
+	@media @mobile {
+		width: auto;
+		margin: 0;
+		display: block;
+	}
+		
+	.responsivecolumns & {
+		width: auto;
+		margin: 0;
+		display: block;
 	}
 }
 
@@ -3203,7 +3210,7 @@ footer.blog-post-metadata time {
 }
 
 .widget.ecomproductslist .ecom-productslist-image-wrap,
-.ecom-featuredproducts-image-wrap,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-image-wrap,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
 	background-color: transparent;
 	background-position: center;
@@ -3240,8 +3247,10 @@ footer.blog-post-metadata time {
 	}
 }
 
-.ecom-productslist-product,
-.ecom-featuredproducts-product {
+// Product Item
+
+.widget.ecomproductslist .ecom-productslist-product,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-product {
 	margin-top: 2em;
 
 	.ecom-productlist-info,
@@ -3322,98 +3331,96 @@ footer.blog-post-metadata time {
 	}
 }
 
-.widget.ecomproductslist {
-	.productlist-pagination {
-		margin-left: 0;
-		border-top: 1px solid darken(@color-swatch6,10%);
-		padding-top: 1em;
-		margin-top: 3em;
-		margin-bottom: 5em;
+.widget.ecomproductslist .productlist-pagination {
+	margin-left: 0;
+	border-top: 1px solid darken(@color-swatch6,10%);
+	padding-top: 1em;
+	margin-top: 3em;
+	margin-bottom: 5em;
+
+	.style--light & {
+		border-color: darken(@color--light, 12%);
+	}
+
+	.style--accent & {
+		border-color: lighten(@color--accent, 12%);
+	}
+
+	.style--dark & {
+		border-color: lighten(@color--dark, 12%);
+	}
+
+	.productlist-pagination-page.current {
+		color: @color-swatch3;
+		border: 1px solid @color-swatch3;
+
+		.style--light & {
+			border-color: @color--accent;
+			color: @color--accent;
+		}
+
+		.style--accent & {
+			border-color: @color--accent;
+			color: @contrast--accent;
+		}
+
+		.style--dark & {
+			border-color: @color--dark;
+			color: @contrast--dark;
+		}
+	}
+
+	.productlist-pagination-page {
+		font-family: @font-swatch7-font-family;
+		color: @font-swatch7-color;
+		font-size: @font-swatch7-font-size;
+		font-weight: @font-swatch7-font-weight;
+		background-color: @color-swatch1;
+		border: 1px solid darken(@color-swatch6,10%);
+		margin: 5px 10px 0 0;
+		text-decoration: none;
 
 		.style--light & {
 			border-color: darken(@color--light, 12%);
+			color: fade(@color--accent, 80%);
 		}
 
 		.style--accent & {
 			border-color: lighten(@color--accent, 12%);
+			color: fade(@contrast--accent, 90%);
 		}
 
 		.style--dark & {
 			border-color: lighten(@color--dark, 12%);
+			color: fade(@contrast--dark, 90%);
 		}
 
-		.productlist-pagination-page.current {
-			color: @color-swatch3;
-			border: 1px solid @color-swatch3;
+		&:hover {
+			border: 1px solid darken(@color-swatch6, 30%);
 
 			.style--light & {
-				border-color: @color--accent;
-				color: @color--accent;
+				border-color: darken(@color--light, 20%);
 			}
 
 			.style--accent & {
-				border-color: @color--accent;
-				color: @contrast--accent;
+				border-color: lighten(@color--accent, 20%);
 			}
 
 			.style--dark & {
-				border-color: @color--dark;
-				color: @contrast--dark;
+				border-color: lighten(@color--dark, 20%);
 			}
 		}
+	}
 
-		.productlist-pagination-page {
-			font-family: @font-swatch7-font-family;
-			color: @font-swatch7-color;
-			font-size: @font-swatch7-font-size;
-			font-weight: @font-swatch7-font-weight;
-			background-color: @color-swatch1;
-			border: 1px solid darken(@color-swatch6,10%);
-			margin: 5px 10px 0 0;
+	.productlist-pagination-pages .productlist-pagination-page {
+		height: 35px;
+		padding: 8px 14px;
+		line-height: 18px;
+		border-radius: 4px;
+	
+		&:hover {
+			cursor: pointer;
 			text-decoration: none;
-
-			.style--light & {
-				border-color: darken(@color--light, 12%);
-				color: fade(@color--accent, 80%);
-			}
-
-			.style--accent & {
-				border-color: lighten(@color--accent, 12%);
-				color: fade(@contrast--accent, 90%);
-			}
-
-			.style--dark & {
-				border-color: lighten(@color--dark, 12%);
-				color: fade(@contrast--dark, 90%);
-			}
-
-			&:hover {
-				border: 1px solid darken(@color-swatch6, 30%);
-
-				.style--light & {
-					border-color: darken(@color--light, 20%);
-				}
-
-				.style--accent & {
-					border-color: lighten(@color--accent, 20%);
-				}
-
-				.style--dark & {
-					border-color: lighten(@color--dark, 20%);
-				}
-			}
-		}
-
-		.productlist-pagination-pages .productlist-pagination-page {
-			height: 35px;
-			padding: 8px 14px;
-			line-height: 18px;
-			border-radius: 4px;
-		
-			&:hover {
-				cursor: pointer;
-				text-decoration: none;
-			}
 		}
 	}
 }
