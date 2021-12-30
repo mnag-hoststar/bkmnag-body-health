@@ -469,6 +469,46 @@ tr:last-child td {
 	margin: 0 auto;
 }
 
+.zone-area {
+	padding-left: 22%;
+
+	@media @desktop-large {
+		padding-left: 250px;
+	}
+	
+	@media @tablet {
+		padding-left:0;
+	}
+}
+
+// NAVIGATION
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	overflow: hidden auto;
+	background: @color-swatch7;
+	width: 22%;
+	height: 100%;
+	padding: 2em;
+	text-align: left;
+	-webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
+	-moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
+	box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
+	
+	@media @desktop-large {
+		width: 250px;
+	}
+
+	@media @tablet {
+		width: 100%;
+		padding: 0;
+		position: relative;
+		overflow-y: hidden;
+	}
+}
 
 // HEADER
 
