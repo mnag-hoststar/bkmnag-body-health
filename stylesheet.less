@@ -2681,12 +2681,6 @@ footer.blog-post-metadata time {
 	letter-spacing: @font-swatch5-letter-spacing;
 }
 
-//  MAP
-
-.widget.map {
-  	border: 1px solid #ddd;
-}
-
 //  SIGNUPFORM
 
 .widget.signupform {
@@ -2877,7 +2871,7 @@ footer.blog-post-metadata time {
 		.btn-prev {
 			&:after {
 				content: "\2190";
-				color: #fff;
+				color: @font-swatch7-color;
 				top: 9px;
 			}
 		}
@@ -2885,7 +2879,7 @@ footer.blog-post-metadata time {
 		.btn-next {
 			&:after {
 				content: "\2192";
-				color: #fff;
+				color: @font-swatch7-color;
 				top: 9px;
 			}
 		}
@@ -2967,13 +2961,13 @@ footer.blog-post-metadata time {
 				padding-right: 0;
 				
 				@media @mobile-large {
-					border-bottom: 1px solid darken(@color-swatch1,7%);
+					border-bottom: 1px solid darken(@color-swatch1, 7%);
 				}
 			}
 
 			@media @mobile-large {
 				width: 100%;
-				border-top: 1px solid darken(@color-swatch1,7%);
+				border-top: 1px solid darken(@color-swatch1, 7%);
 				padding: 15px 0 10px 0;
 			}
 
