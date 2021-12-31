@@ -2373,6 +2373,22 @@ button.btn {
 	}
 }
 
+.widget button.btn span {
+	color: @font-swatch7-color;
+
+	.style--light & {
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		color: @contrast--accent;
+	} 
+}
+
 // Radiobuttons, Checkboxes
 
 .contactform .option-item--radio,
