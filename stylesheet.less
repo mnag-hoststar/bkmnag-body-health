@@ -2337,42 +2337,43 @@ select {
 // Buttons
 
 button,
-button.btn {
-	&,
-	.contactform &,
-	.advancedcontactform & {
-		padding: 10px 40px;
-		border-radius: 4px;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+button.btn,
+.contactform button,
+.contactform button.btn,
+.advancedcontactform button {
+.advancedcontactform button.btn,
+.userregistration fieldset .userregistrationbtn {
+	padding: 10px 40px;
+	border-radius: 4px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+
+	.style--light & {
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
+
+	.style--accent & {
+		text-shadow: 0 1px 1px darken(@color--dark, 10%)
+	}
+
+	.style--dark & {
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
+	
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
 
 		.style--light & {
-			text-shadow: 0 1px 1px darken(@color--accent, 10%);
+			background-color: darken(@color--accent, 5%);
 		}
-	
+
 		.style--accent & {
-			text-shadow: 0 1px 1px darken(@color--dark, 10%)
+			background-color: lighten(@color--dark, 5%);
 		}
-	
+
 		.style--dark & {
-			text-shadow: 0 1px 1px darken(@color--accent, 10%);
-		}
-		
-		&:hover {
-			background-color: @font-swatch7-background-color-hover;
-	
-			.style--light & {
-				background-color: darken(@color--accent, 5%);
-			}
-	
-			.style--accent & {
-				background-color: lighten(@color--dark, 5%);
-			}
-	
-			.style--dark & {
-				background-color: darken(@color--accent, 5%);
-			}
+			background-color: darken(@color--accent, 5%);
 		}
 	}
 }
@@ -2562,6 +2563,42 @@ footer.bk-footer .widget.profile .form-group.profile__form-group.profile__form-g
 	label[for*="input--terms"] span a.form__link {
 		text-decoration: underline;
 		border: none;
+	}
+}
+
+// REGISTERATION FORM
+
+.widget.userregistration {
+	fieldset {
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		max-width: 400px;
+		
+		@media @mobile {
+			max-width: none;
+		}
+
+		.responsivecolumns & {
+			max-width: none;
+		}
+
+		input {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.error {
+			padding: 20px 0 0;
+
+			&[style*="display: block"] {
+				padding: 20px 0;
+			}
+
+			&[style*="display: none"] {
+				display: block !important;
+			}
+		}
 	}
 }
 
