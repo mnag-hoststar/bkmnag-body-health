@@ -3756,8 +3756,25 @@ a.btn.ecombasket-summary-link {
 
 // PRODUCT
 
-.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
-	background-image: none !important;
+.widget.ecomproduct {
+	.ecom-product .ecom-product-preview-image-wrap {
+		background-image: none !important;
+	}
+	
+	.product-actions {
+		button {
+			margin-bottom: 1em;
+			text-align: center;
+        
+			@media @mobile {
+				width: 100%;
+			}
+
+			&:before {
+				float: none;
+			}
+		}
+	}
 }
 
 .ecom-product-long-description {
