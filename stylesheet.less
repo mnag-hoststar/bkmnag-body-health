@@ -2325,28 +2325,55 @@ select {
 
 // Buttons
 
-button,
+.btn,
 button.btn,
-.contactform button,
-.contactform button.btn,
-.advancedcontactform button {
-.advancedcontactform button.btn,
-.userregistration fieldset .userregistrationbtn {
+button.button,
+.widget.tweet a,
+.widget.dropbox button,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.clicktocall a,
+.widget.feature .feature-bgimg .content button,
+.userregistration fieldset .userregistrationbtn,
+.widget.socialicons span a,
+.widget.yelpreview .review-body .review-link a,
+.blog-post-more-link a,
+form.blog-search-form .form-group button {
+	display: inline-block;
+	margin: 0.5em 0;
 	padding: 10px 40px;
 	border-radius: 4px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+	border: none;
+	min-height: 45px;
+	background-color: fade(@color-swatch3, 80%);
+	font-family: @font-swatch7-font-family;
+	font-weight: @font-swatch6-font-weight;
+	line-height: @font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+	font-size: @font-swatch7-font-size; 
+	color: fade(@font-swatch7-color, 90%);
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: background-color 0.15s ease-in-out;
+	-moz-transition: background-color 0.15s ease-in-out;
+	-o-transition: background-color 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out;
 
 	.style--light & {
+		color: fade(@contrast--accent, 90%);
 		text-shadow: 0 1px 1px darken(@color--accent, 10%);
 	}
 
 	.style--accent & {
+		color: fade(@contrast--dark, 90%);
 		text-shadow: 0 1px 1px darken(@color--dark, 10%)
 	}
 
 	.style--dark & {
+		color: fade(@contrast--accent, 90%);
 		text-shadow: 0 1px 1px darken(@color--accent, 10%);
 	}
 	
