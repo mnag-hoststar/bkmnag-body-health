@@ -1,8 +1,8 @@
 {
-	"name":"Body Health",
-	"thumbnail":"thumbnail.png",
-	"screenshot":"bodyhealth-screenshot.jpg",
-	"templateType":"standard",
+	"name": "Body Health",
+	"thumbnail": "images/thumbnail.png",
+	"screenshot": "images/screenshot.jpg",
+	"templateType": "standard",
     "versionTenCompatible": 1,
 	"pageTypes":["home"],
     "tags": {
@@ -10,6 +10,11 @@
     "es": ["turismo", "limpio", "moderno", "colorido", "flexible", "abierto", "menú vertical", "balneario", "serif", "viaje", "hoteleria", "vacaciones", "hotel", "bienestar"],
     "br": ["turismo", "limpo", "moderno", "colorido", "flexível", "aberto", "menu vertical", "estância termal", "serif", "Viagem", "hospitalidade", "férias", "hotel", "wellness"]
     },
+    "images":[
+        "images/gallery/gallery-image--1.jpg",
+        "images/gallery/gallery-image--2.jpg",
+        "images/gallery/gallery-image--3.jpg"
+    ],
 	"colorSwatches":
     {
         "Swatch 1": {
