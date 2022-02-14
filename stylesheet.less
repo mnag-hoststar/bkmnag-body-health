@@ -15,6 +15,27 @@
 	appearance: @appearance;
 }
 
+// BASEKIT ELEMENTS
+
+.top-level-overlay button.top-level-overlay__delete-button,
+.row-overlay__delete-button,
+.top-level-overlay button.top-level-overlay__arrangement-button--up,
+.row-overlay__arrangement-button--up,
+.top-level-overlay button.top-level-overlay__arrangement-button--down,
+.row-overlay__arrangement-button--down, .row-overlay__edit-button {
+	background: transparent !important;
+}
+
+.row-overlay__edit-button {
+	background: #fff !important;
+}
+
+.is-dropdown-open .row-overlay__edit-button .row-overlay__edit-button-icon,
+.is-setting-open .row-overlay__edit-button .row-overlay__edit-button-icon {
+	left: auto !important;
+    top: auto !important;
+}
+
 // MAIN
 
 body {
@@ -1919,6 +1940,7 @@ label, .label {
 		line-height: @font-swatch5-line-height;
 		color: @font-swatch5-color;
 		letter-spacing: @font-swatch5-letter-spacing;
+        word-break: break-word;
 	}
 }
 
@@ -1976,15 +1998,18 @@ textarea {
 
 .select-wrap {
 	position: relative;
-	max-width: 50%;
 
-	@media @mobile {
-		max-width: 100%;
-	}
+    .advancedcontactform & {
+        max-width: 50%;
 
-	.responsivecolumns & {
-		max-width: 100%;
-	}
+        @media @tablet {
+            max-width: 100%;
+        }
+    
+        .responsivecolumns & {
+            max-width: 100%;
+        }
+    }
 }
 
 select {
@@ -2861,190 +2886,6 @@ footer.blog-post-metadata time {
 			}
 		}
 	}
-}
-
-//  MENU SECTIONS NAVIGATION
-
-.widget.menusections {
-	text-align: center;
-	padding: 0.5em 0 0;
-	
-	@media @tablet {
-		margin-top: 1.5em;
-	}
-
-	@media @mobile-large {
-		padding:0;
-		margin-top:0;
-		padding: 0 0 0;
-	}
-	
-	ul {
-		display: table;
-		width: 100%;
-		margin: 0 auto;
-		list-style: none;
-		padding: 0;
-
-		li {
-			display: inline-block;
-			padding: 10px 15px 10px 0;
-			margin: 0;
-
-			&:last-child {
-				padding-right: 0;
-				
-				@media @mobile-large {
-					border-bottom: 1px solid darken(@color-swatch1, 7%);
-				}
-			}
-
-			@media @mobile-large {
-				width: 100%;
-				border-top: 1px solid darken(@color-swatch1, 7%);
-				padding: 15px 0 10px 0;
-			}
-
-			a {
-				&:hover {
-					color: @font-swatch6-color;
-					text-decoration: none;
-				}
-			}
-		}
-	}
-}
-
-//  MENU
-
-.widget.menu {
-	margin: 20px 0;
-
-	h4,
-	.menu-item-nutritional-prop {
-		font-size: @font-swatch5-font-size;
-	}
-
-	.menu-header,
-	.menu-subsection-header { 
-		text-align: center;
-		padding: 2em 0;
-	}
-
-	.menu-items {
-		li {
-		display: block;
-		padding: 20px 0;
-
-			.inner-item {
-				display: block;
-				padding: 0;
-				margin: 0;
-			}
-
-			&.menu-item-promoted {
-				padding: 30px;
-				border: 2px solid fade(@color-swatch3, 20%);
-				background-color: @color-swatch1;
-			}
-		}
-
-		.menu-item-image-wrap {
-			height: 200px;
-			background-size: cover;
-			background-position: center;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			clear:both;
-			background-repeat: no-repeat;
-			background-position: center;
-
-			img {
-				display: none;
-			}
-		}
-	}
-
-	.menu-item-price {
-		padding: 10px 0;
-
-		p {
-			color: @color-swatch3;
-			font-weight: @font-swatch7-font-weight;
-			padding: 0;
-		}
-	}
-
-	.menu-section-item-dietary-props {
-		.dietary-icon {
-			background-color: @color-swatch3;
-			font-size: bkscale(@font-swatch5-font-size,0.8);
-			color: @color-swatch1;
-			padding: 0px 10px;
-			text-transform: uppercase;
-			letter-spacing: 0.3px;
-			-webkit-border-radius: 2px;
-			-moz-border-radius: 2px;
-			border-radius: 2px;
-		}
-	}
-
-	// Menu Subsection
-
-	.menu-subsection {
-		padding: 0;
-		margin: 0;
-	}
-
-	.wrapper {
-		width: 100%;
-		margin: 0;
-	}
-}
-
-.menu-subsection-header .menu-subsection-name {
-	color: @color-swatch7;
-}
-
-.menu-subsection .menu-subsection-promoted {
-	padding: 0.5em 2.5em;
-	margin-bottom: 2em;
-	position: relative;
-	border: 2px solid fade(@color-swatch3,20%);
-	background-color: @color-swatch1;
-
-	@media @mobile {
-		padding: 0 2em 0;
-		margin-bottom: 2em;
-	}
-
-	.menu-subsection-header {
-		h2 {
-			color: @color-swatch3;
-			background-image: none;
-
-			&:before, &:after {
-				content: "\2605";
-				display: inline-block;
-				height: 27px;
-				width: 28px;
-				margin: 0 10px;
-				position: relative;
-				top: -1px;
-			}
-		}
-	}
-}
-
-.widget {
-	.youtube, .map {
-		margin: 1.5em 0;
-	}
-}
-
-.widget.map {
-  	border: none;
 }
 
 // E-COMMERCE
