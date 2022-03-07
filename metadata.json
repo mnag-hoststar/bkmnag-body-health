@@ -114,7 +114,7 @@
             "color-hover": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch7",
-            "background-color-hover": "darken(@color-swatch7, 3%)"
+            "background-color-hover": "darken(@color-swatch7, 5%)"
         },
         "font7": {
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
@@ -124,7 +124,7 @@
             "color": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch3",
-            "background-color-hover": "darken(@color-swatch3,5%)"
+            "background-color-hover": "darken(@color-swatch3, 5%)"
         },
         "font8": {
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
