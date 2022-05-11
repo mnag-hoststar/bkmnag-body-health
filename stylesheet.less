@@ -91,7 +91,6 @@ label, .label {
 
 p, ul, ol, li,
 dd, pre, code,
-.contentgroup__body,
 blockquote,
 .widget.image .image-description,
 .blog-post-published-date {
@@ -187,8 +186,7 @@ code {
 
 table {
 	overflow: auto;
-	width: 100%;
-	max-width: 100%;
+	min-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -289,6 +287,7 @@ td {
 		padding: 0 0.5em;
 		border-bottom: none;
 		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	.responsivecolumns & {
@@ -296,6 +295,7 @@ td {
 		padding: 0 0.5em;
 		border-bottom: none;
 		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	&:first-child {
@@ -1236,6 +1236,8 @@ header nav {
 
 							.text {
 								padding: 0 5px;
+								overflow: visible;
+								word-break: break-word;
 
 								&:after {
 									content: '';
@@ -2143,6 +2145,7 @@ form.blog-search-form .form-group button,
 	text-shadow: 0 1px 1px darken(@font-swatch7-background-color, 10%);
 	border: none;
 	min-height: 45px;
+	height: auto !important;
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-weight: @font-swatch7-font-weight;
@@ -2238,6 +2241,12 @@ form.blog-search-form .form-group button,
 	}
 }
 
+.widget.tweet a:before {content: '\f099';}
+.widget.clicktocall a:before {content: '\f095';}
+.widget.dropbox button span:before {content: '\f16b';}
+.widget.filedownload button.btn:before {content: '\f019';}
+.widget.paypalbuynow .widget.button.paypal:before {content: '\f1ed';}
+
 .widget.paypalbuynow .widget.button.paypal {
 	background-image: none;
 	text-indent: 0;
@@ -2247,11 +2256,16 @@ form.blog-search-form .form-group button,
 	}
 }
 
-.widget.tweet a:before {content: '\f099';}
-.widget.clicktocall a:before {content: '\f095';}
-.widget.dropbox button span:before {content: '\f16b';}
-.widget.filedownload button.btn:before {content: '\f019';}
-.widget.paypalbuynow .widget.button.paypal:before {content: '\f1ed';}
+.widget.filedownload div {
+	@media @mobile {
+		float: none;
+	}
+
+	span.file-name {
+		display: block;
+		margin: 0.5em 0;
+	}
+}
 
 // Social Icons
 
@@ -2371,6 +2385,7 @@ footer .widget.profile .bk-profile-socialicons {
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @color-swatch1;
 			border: 1px solid @font-swatch7-background-color;
+			border-radius: 0;
 
 			.style--light & {
 				border-color: @font-swatch7-background-color;
@@ -3142,7 +3157,8 @@ footer .widget.profile .bk-profile-socialicons {
 
 .widget.ecomproductslist .ecom-productslist-product,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-product,
-.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap.products-2 .ecom-featuredproducts-product {
 	margin-top: 2em;
 }
 
