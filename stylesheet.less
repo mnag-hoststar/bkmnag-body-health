@@ -1208,16 +1208,12 @@ header nav {
 					width: auto;
 					margin: 0;
 					padding: 0;
-					min-width: 250px;
-					max-width: 400px;
 					background-color: lighten(@color-swatch7, 10%);
 					border: 1px solid darken(@color-swatch7, 10%);
 
 					@media @tablet {
 						display: none;
 						position: static;
-						max-width: none;
-						min-width: auto;
 					}
 
 					li {
@@ -2017,22 +2013,25 @@ select,
 textarea {
 	width: 100%;
 	min-height: 45px;
+	padding: 0;
     height: auto !important;
 	border: 1px solid darken(@color-swatch6, 10%);
 	background-color: @color-swatch1;
 	text-indent: 8px;
-	padding: 0;
 	border-radius: 4px;
+	color: @font-swatch5-color;
 
 	.style--light & {
 		background-color: @color-swatch1;
 		border-color: darken(@color-swatch6, 10%);
+		color: @font-swatch5-color;
 	}
 
 	.style--accent &,
 	.style--dark & {
 		background-color: darken(@color--light, 5%);
 		border-color: darken(@color--light, 10%);
+		color: @font-swatch5-color;
 	}
 
 	&:focus {
@@ -2064,6 +2063,7 @@ select {
 
 textarea {
 	min-height: 100px;
+	padding: 8px 0px;
 }
 
 // Dropdowns
