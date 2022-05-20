@@ -230,16 +230,9 @@ th {
 	padding: 0.5em;
 	border-bottom: 1px solid @font-swatch5-color;
 	text-align: left;
-	font-family: @font-swatch4-font-family;
-	font-weight: @font-swatch4-font-weight;
-	font-size: @font-swatch4-font-size;
-	line-height: @font-swatch4-line-height;
-	letter-spacing: @font-swatch5-letter-spacing;
-	color: @font-swatch4-color;
 
 	.style--light & {
 		border-bottom-color: @font-swatch5-color;
-		color: @font-swatch4-color;
 	}
 
 	.style--accent & {
@@ -1215,11 +1208,16 @@ header nav {
 					width: auto;
 					margin: 0;
 					padding: 0;
+					min-width: 250px;
+					max-width: 400px;
 					background-color: lighten(@color-swatch7, 10%);
 					border: 1px solid darken(@color-swatch7, 10%);
 
 					@media @tablet {
 						display: none;
+						position: static;
+						max-width: none;
+						min-width: auto;
 					}
 
 					li {
@@ -1592,17 +1590,8 @@ blockquote {
 
 		span.image-title {
 			display: block;
-			margin:10px 0 0;
-			font-family: @font-swatch4-font-family;
-			font-weight: @font-swatch4-font-weight;
-			font-size: @font-swatch4-font-size;
-			color: @font-swatch4-color;
-			line-height: @font-swatch4-line-height;
+			margin: 10px 0 0;
 			text-decoration: none;
-		
-			.style--light & {
-				color: @font-swatch4-color;
-			}
 		
 			.style--accent & {
 				color: @contrast--accent;
@@ -1613,10 +1602,10 @@ blockquote {
 			}
 		
 			&:hover {
-				color: lighten(@font-swatch4-color, 30%);
+				color: lighten(@font-swatch5-color, 30%);
 			
 				.style--light & {
-					color: lighten(@font-swatch4-color, 30%);
+					color: lighten(@font-swatch5-color, 30%);
 				}
 			
 				.style--accent & {
@@ -1704,8 +1693,6 @@ hr.line {
 			.title,
 			.description {
 				color: @color-swatch1;
-				font-family: @font-swatch4-font-family;
-				letter-spacing: @font-swatch4-letter-spacing;
 				text-align: left;
 			}
 
@@ -2030,6 +2017,7 @@ select,
 textarea {
 	width: 100%;
 	min-height: 45px;
+    height: auto !important;
 	border: 1px solid darken(@color-swatch6, 10%);
 	background-color: @color-swatch1;
 	text-indent: 8px;
@@ -2075,7 +2063,7 @@ select {
 }
 
 textarea {
-	height: 100px;
+	min-height: 100px;
 }
 
 // Dropdowns
@@ -2126,6 +2114,7 @@ button.button,
 .advancedcontactform button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
+.widget.clicktocall a:hover,
 .widget.dropbox button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
@@ -2145,7 +2134,7 @@ form.blog-search-form .form-group button,
 	text-shadow: 0 1px 1px darken(@font-swatch7-background-color, 10%);
 	border: none;
 	min-height: 45px;
-	height: auto !important;
+	height: auto;
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-weight: @font-swatch7-font-weight;
@@ -2274,9 +2263,7 @@ form.blog-search-form .form-group button,
 footer .widget.profile .bk-profile-socialicons {
 	span {
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			display: inline-block;
 			background-image: none;
 			background-color: @font-swatch7-background-color;
 			margin: 0 5px 10px;
@@ -2284,6 +2271,7 @@ footer .widget.profile .bk-profile-socialicons {
 			width: 32px;
 			height: 32px;
 			min-height: 32px;
+			line-height: 32px;
 			border-radius: 50%;
 			text-indent: 0;
 			font-size: 0;
@@ -2883,6 +2871,8 @@ footer .widget.profile .bk-profile-socialicons {
 	// Slideshow Controls
 
 	.slideshow-widget-controls {
+		margin-bottom: 20px;
+		
 		.dot {
 			width: 10px;
 			height: 10px;
