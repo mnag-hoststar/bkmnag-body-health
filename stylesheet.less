@@ -3251,12 +3251,15 @@ footer .widget.profile .bk-profile-socialicons {
 
 .widget.ecomproductslist .productlist-pagination,
 .widget.ecomfeaturedproducts .productlist-pagination {
-	margin-left: 0;
 	border-top: 1px solid darken(@color-swatch6, 10%);
-	padding-top: 1em;
-	margin-top: 3em;
-	margin-bottom: 5em;
-	text-align: center;
+    padding: 1em 20px;
+    width: calc(~"100% - 40px");
+    text-align: center;
+    margin: 3em auto;
+
+	@media @mobile {
+		width: 100%;
+	}
 
 	.style--light & {
 		border-color: darken(@color-swatch6, 10%);
@@ -3270,77 +3273,84 @@ footer .widget.profile .bk-profile-socialicons {
 		border-color: lighten(@color--dark, 12%);
 	}
 
-	.productlist-pagination-page.current {
-		color: @color-swatch3;
-		border: 1px solid @color-swatch3;
-
-		.style--light & {
-			border-color: @color-swatch3;
-			color: @color-swatch3;
-		}
-
-		.style--accent & {
-			border-color: @color--accent;
-			color: @contrast--accent;
-		}
-
-		.style--dark & {
-			border-color: @color--dark;
-			color: @contrast--dark;
-		}
-	}
-
-	.productlist-pagination-page {
-		font-family: @font-swatch7-font-family;
-		color: @font-swatch7-color;
-		font-size: @font-swatch7-font-size;
-		font-weight: @font-swatch7-font-weight;
-		background-color: @color-swatch1;
-		border: 1px solid darken(@color-swatch6, 10%);
-		margin: 5px 10px 0 0;
-		text-decoration: none;
-
-		.style--light & {
-			border-color: darken(@color-swatch6, 10%);
-			color: @font-swatch7-color;
-		}
-
-		.style--accent & {
-			border-color: lighten(@color--accent, 12%);
-			color: fade(@contrast--accent, 90%);
-		}
-
-		.style--dark & {
-			border-color: lighten(@color--dark, 12%);
-			color: fade(@contrast--dark, 90%);
-		}
-
-		&:hover {
-			border: 1px solid darken(@color-swatch6, 30%);
-
-			.style--light & {
-				border-color: darken(@color-swatch6, 30%);
-			}
-
-			.style--accent & {
-				border-color: lighten(@color--accent, 20%);
-			}
-
-			.style--dark & {
-				border-color: lighten(@color--dark, 20%);
-			}
-		}
-	}
-
 	.productlist-pagination-pages .productlist-pagination-page {
 		height: 35px;
 		padding: 8px 14px;
 		line-height: 18px;
 		border-radius: 4px;
+		padding: 0 0.25em;
+
+		@media @mobile {
+			padding: 0 0.1em;
+		}
 	
 		&:hover {
-			cursor: pointer;
 			text-decoration: none;
+		}
+
+		a, span {
+			display: inline-block;
+			height: 32px;
+			width: 32px;
+			line-height: 30px;
+			border-radius: 4px;
+
+			@media @mobile {
+				height: 24px;
+				width: 24px;
+				line-height: 22px;
+			}
+		}
+
+		a {
+			border: 1px solid darken(@color-swatch6, 10%);
+	
+			.style--light & {
+				border-color: darken(@color-swatch6, 10%);
+			}
+	
+			.style--accent & {
+				border-color: lighten(@color--accent, 12%);
+			}
+	
+			.style--dark & {
+				border-color: lighten(@color--dark, 12%);
+			}
+	
+			&:hover {
+				text-decoration: none;
+				border: 1px solid darken(@color-swatch6, 30%);
+	
+				.style--light & {
+					border-color: darken(@color-swatch6, 30%);
+				}
+	
+				.style--accent & {
+					border-color: lighten(@color--accent, 20%);
+				}
+	
+				.style--dark & {
+					border-color: lighten(@color--dark, 20%);
+				}
+			}
+		}
+
+		&.current {
+			span {
+				border: 1px solid @color-swatch3;
+		
+				.style--light & {
+					border-color: @color-swatch3;
+				}
+		
+				.style--accent & {
+					border-color: @color--accent;
+				}
+		
+				.style--dark & {
+					border-color: @color--dark;
+				}
+			}
 		}
 	}
 }
